@@ -33,7 +33,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<YeastItem>(typeof(CulinaryArtsEfficiencySkill), 10, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYMisoAndSoySauceRecipe), Item.Get<MYMisoItem>().UILink(), 120, typeof(CulinaryArtsSpeedSkill)); 
-            this.Initialize("Miso　And Soy Sauce", typeof(MYMisoAndSoySauceRecipe));
+            this.Initialize("Miso And Soy Sauce", typeof(MYMisoAndSoySauceRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }
     }

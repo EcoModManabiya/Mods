@@ -41,6 +41,7 @@ namespace Eco.Mods.TechTree
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<YeastItem>(typeof(CulinaryArtsEfficiencySkill), 10, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<PlantFibersItem>(typeof(CulinaryArtsEfficiencySkill), 20, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<BeansItem>(30), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYNattoRecipe), Item.Get<MYNattoItem>().UILink(), 40, typeof(HomeCookingSpeedSkill)); 
