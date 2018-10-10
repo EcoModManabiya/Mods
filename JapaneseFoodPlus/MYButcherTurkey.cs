@@ -10,7 +10,7 @@ namespace Eco.Mods.TechTree
     using Eco.World;
     using Eco.World.Blocks;
     using Gameplay.Systems.TextLinks;
-	using Kirthos.Mods.Utils;
+    using Kirthos.Mods.Utils;
 
     [RequiresSkill(typeof(SmallButcherySkill), 1)] 
     public class MYButcherTurkeyRecipe : Recipe
