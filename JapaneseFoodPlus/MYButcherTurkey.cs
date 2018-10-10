@@ -12,11 +12,6 @@ namespace Eco.Mods.TechTree
     using Gameplay.Systems.TextLinks;
 	using Kirthos.Mods.Utils;
 
-    public void Initialize(TimedTask timer)
-    {
-        RecipeRemover.RemoveRecipe(typeof(ButcherTurkeyRecipe));
-    }
-
     [RequiresSkill(typeof(SmallButcherySkill), 1)] 
     public class MYButcherTurkeyRecipe : Recipe
     {
