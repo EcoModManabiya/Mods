@@ -20,7 +20,7 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequiresSkill(typeof(ChefSkill), 0)]    
-    public partial class TraditionalCookingSkill : Skill
+    public partial class MYTraditionalCookingSkill : Skill
     {
         public override string FriendlyName { get { return "Traditional Cooking"; } }
         public override string Description { get { return Localizer.DoStr(""); } }
@@ -32,34 +32,36 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    public partial class TraditionalCookingSkillBook : SkillBook<TraditionalCookingSkill, TraditionalCookingSkillScroll>
+    public partial class MYTraditionalCookingSkillBook : SkillBook<MYTraditionalCookingSkill, MYTraditionalCookingSkillScroll>
     {
         public override string FriendlyName { get { return "Traditional Cooking Skill Book"; } }
     }
 
     [Serialized]
-    public partial class TraditionalCookingSkillScroll : SkillScroll<TraditionalCookingSkill, TraditionalCookingSkillBook>
+    public partial class MYTraditionalCookingSkillScroll : SkillScroll<MYTraditionalCookingSkill, MYTraditionalCookingSkillBook>
     {
         public override string FriendlyName { get { return "Traditional Cooking Skill Scroll"; } }
     }
 
     [RequiresSkill(typeof(CookingSkill), 0)] 
-    public partial class TraditionalCookingSkillBookRecipe : Recipe
+    public partial class MYTraditionalCookingSkillBookRecipe : Recipe
     {
-        public TraditionalCookingSkillBookRecipe()
+        public MYTraditionalCookingSkillBookRecipe()
         {
             this.Products = new CraftingElement[]
             {
-                new CraftingElement<TraditionalCookingSkillBook>(),
+                new CraftingElement<MYTraditionalCookingSkillBook>(),
             };
             this.Ingredients = new CraftingElement[]
             {
-                new CraftingElement<BasicSaladItem>(typeof(ResearchEfficiencySkill), 20, ResearchEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<FruitSaladItem>(typeof(ResearchEfficiencySkill), 20, ResearchEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<YeastItem>(typeof(ResearchEfficiencySkill), 20, ResearchEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<OilItem>(typeof(ResearchEfficiencySkill), 20, ResearchEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<FlourItem>(typeof(ResearchEfficiencySkill), 20, ResearchEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYSaltItem>(typeof(ResearchEfficiencySkill), 20, ResearchEfficiencySkill.MultiplicativeStrategy), 
             };
-            this.CraftMinutes = new ConstantValue(30);
+            this.CraftMinutes = new ConstantValue(60);
 
-            this.Initialize("Traditional Cooking Skill Book", typeof(TraditionalCookingSkillBookRecipe));
+            this.Initialize("Traditional Cooking Skill Book", typeof(MYTraditionalCookingSkillBookRecipe));
             CraftingComponent.AddRecipe(typeof(ResearchTableObject), this);
         }
     }

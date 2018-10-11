@@ -28,7 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(CulinaryArtsSkill), 3)]    
+    [RequiresSkill(typeof(FishingSkill), 4)]    
     public partial class MYNoriRecipe : Recipe
     {
         public MYNoriRecipe()
@@ -40,9 +40,9 @@ namespace Eco.Mods.TechTree
             };
             this.Ingredients = new CraftingElement[]
             {
-                new CraftingElement<KelpItem>(typeof(CulinaryArtsEfficiencySkill), 20, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<KelpItem>(typeof(FishingSkill), 20, FishingSkill.MultiplicativeStrategy), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNoriRecipe), Item.Get<MYNoriItem>().UILink(), 120, typeof(CulinaryArtsSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNoriRecipe), Item.Get<MYNoriItem>().UILink(), 120, typeof(FishingSkill)); 
             this.Initialize("Nori", typeof(MYNoriRecipe));
             CraftingComponent.AddRecipe(typeof(CampfireObject), this);
         }

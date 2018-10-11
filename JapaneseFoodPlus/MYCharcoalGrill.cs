@@ -19,8 +19,8 @@ namespace Eco.Mods.TechTree
     using Gameplay.Systems.Tooltip;
 
     [Serialized]
-    [RequiresSkill(typeof(TraditionalCookingSkill), 1)]    
-    public partial class CharcoalGrillSkill : Skill
+    [RequiresSkill(typeof(MYTraditionalCookingSkill), 1)]    
+    public partial class MYCharcoalGrillSkill : Skill
     {
         public override string FriendlyName { get { return "Charcoal Grill"; } }
         public override string Description { get { return Localizer.DoStr(""); } }
@@ -33,6 +33,40 @@ namespace Eco.Mods.TechTree
         public override int RequiredPoint { get { return this.Level < this.MaxLevel ? SkillPointCost[this.Level] : 0; } }
         public override int PrevRequiredPoint { get { return this.Level - 1 >= 0 && this.Level - 1 < this.MaxLevel ? SkillPointCost[this.Level - 1] : 0; } }
         public override int MaxLevel { get { return 4; } }
+    }
+
+    [Serialized]
+    [RequiresSkill(typeof(MYCharcoalGrillSkill), 1)]    
+    public partial class MYCharcoalGrillEfficiencySkill : Skill
+    {
+        public override string FriendlyName { get { return "Charcoal Grill Efficiency"; } }
+        public override string Description { get { return Localizer.DoStr(""); } }
+
+        public static ModificationStrategy MultiplicativeStrategy = 
+            new MultiplicativeStrategy(new float[] { 1, 1 - 0.2f, 1 - 0.35f, 1 - 0.5f, 1 - 0.65f, 1 - 0.8f });
+        public static ModificationStrategy AdditiveStrategy =
+            new AdditiveStrategy(new float[] { 0, 0.2f, 0.35f, 0.5f, 0.65f, 0.8f });
+        public static int[] SkillPointCost = { 10, 20, 35, 55, 70 };
+        public override int RequiredPoint { get { return this.Level < this.MaxLevel ? SkillPointCost[this.Level] : 0; } }
+        public override int PrevRequiredPoint { get { return this.Level - 1 >= 0 && this.Level - 1 < this.MaxLevel ? SkillPointCost[this.Level - 1] : 0; } }
+        public override int MaxLevel { get { return 5; } }
+    }
+
+    [Serialized]
+    [RequiresSkill(typeof(MYCharcoalGrillEfficiencySkill), 1)]    
+    public partial class MYCharcoalGrillSpeedSkill : Skill
+    {
+        public override string FriendlyName { get { return "Charcoal Grill Speed"; } }
+        public override string Description { get { return Localizer.DoStr(""); } }
+
+        public static ModificationStrategy MultiplicativeStrategy = 
+            new MultiplicativeStrategy(new float[] { 1, 1 - 0.2f, 1 - 0.35f, 1 - 0.5f, 1 - 0.65f, 1 - 0.8f });
+        public static ModificationStrategy AdditiveStrategy =
+            new AdditiveStrategy(new float[] { 0, 0.2f, 0.35f, 0.5f, 0.65f, 0.8f });
+        public static int[] SkillPointCost = { 10, 10, 10, 10, 10 };
+        public override int RequiredPoint { get { return this.Level < this.MaxLevel ? SkillPointCost[this.Level] : 0; } }
+        public override int PrevRequiredPoint { get { return this.Level - 1 >= 0 && this.Level - 1 < this.MaxLevel ? SkillPointCost[this.Level - 1] : 0; } }
+        public override int MaxLevel { get { return 5; } }
     }
 
 }

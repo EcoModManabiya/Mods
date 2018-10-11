@@ -20,9 +20,9 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequiresSkill(typeof(MYTraditionalCookingSkill), 1)]    
-    public partial class MYGoldenProportionOfBoildSkill : Skill
+    public partial class MYBestSmellSkill : Skill
     {
-        public override string FriendlyName { get { return "Golden Proportion Of Boild"; } }
+        public override string FriendlyName { get { return "Best Smell"; } }
         public override string Description { get { return Localizer.DoStr(""); } }
 
         public static ModificationStrategy MultiplicativeStrategy = 
@@ -36,10 +36,10 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 1)]    
-    public partial class MYGoldenProportionOfBoildEfficiencySkill : Skill
+    [RequiresSkill(typeof(MYBestSmellSkill), 1)]    
+    public partial class MYBestSmellEfficiencySkill : Skill
     {
-        public override string FriendlyName { get { return "Golden Proportion Of Boild Efficiency"; } }
+        public override string FriendlyName { get { return "Best Smell Efficiency"; } }
         public override string Description { get { return Localizer.DoStr(""); } }
 
         public static ModificationStrategy MultiplicativeStrategy = 
@@ -53,10 +53,10 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    [RequiresSkill(typeof(MYGoldenProportionOfBoildEfficiencySkill), 1)]    
-    public partial class MYGoldenProportionOfBoildSpeedSkill : Skill
+    [RequiresSkill(typeof(MYBestSmellEfficiencySkill), 1)]    
+    public partial class MYBestSmellSpeedSkill : Skill
     {
-        public override string FriendlyName { get { return "Golden Proportion Of Boild Speed"; } }
+        public override string FriendlyName { get { return "Best Smell Speed"; } }
         public override string Description { get { return Localizer.DoStr(""); } }
 
         public static ModificationStrategy MultiplicativeStrategy = 

@@ -28,7 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(CulinaryArtsSkill), 2)]    
+    [RequiresSkill(typeof(MYHighestNigiriSkill), 3)]    
     public partial class MYBattleshipRollSushiOfUrchinRecipe : Recipe
     {
         public MYBattleshipRollSushiOfUrchinRecipe()
@@ -36,16 +36,17 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYBattleshipRollSushiOfUrchinItem>(2),
+                new CraftingElement<GarbageItem>(typeof(MYHighestNigiriEfficiencySkill), 2, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<UrchinItem>(1), 
                 new CraftingElement<MYNoriItem>(2), 
-                new CraftingElement<RiceItem>(typeof(CulinaryArtsEfficiencySkill), 20, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYSoySauceItem>(typeof(CulinaryArtsEfficiencySkill), 5, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<RiceItem>(typeof(MYHighestNigiriEfficiencySkill), 20, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYSoySauceItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBattleshipRollSushiOfUrchinRecipe), Item.Get<MYBattleshipRollSushiOfUrchinItem>().UILink(), 10, typeof(CulinaryArtsSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBattleshipRollSushiOfUrchinRecipe), Item.Get<MYBattleshipRollSushiOfUrchinItem>().UILink(), 10, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Battleship Roll Sushi Of Urchin", typeof(MYBattleshipRollSushiOfUrchinRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

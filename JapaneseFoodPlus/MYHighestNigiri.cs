@@ -20,9 +20,9 @@ namespace Eco.Mods.TechTree
 
     [Serialized]
     [RequiresSkill(typeof(MYTraditionalCookingSkill), 1)]    
-    public partial class MYGoldenProportionOfBoildSkill : Skill
+    public partial class MYHighestNigiriSkill : Skill
     {
-        public override string FriendlyName { get { return "Golden Proportion Of Boild"; } }
+        public override string FriendlyName { get { return "Highest Nigiri"; } }
         public override string Description { get { return Localizer.DoStr(""); } }
 
         public static ModificationStrategy MultiplicativeStrategy = 
@@ -36,10 +36,10 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 1)]    
-    public partial class MYGoldenProportionOfBoildEfficiencySkill : Skill
+    [RequiresSkill(typeof(MYHighestNigiriSkill), 1)]    
+    public partial class MYHighestNigiriEfficiencySkill : Skill
     {
-        public override string FriendlyName { get { return "Golden Proportion Of Boild Efficiency"; } }
+        public override string FriendlyName { get { return "Highest Nigiri Efficiency"; } }
         public override string Description { get { return Localizer.DoStr(""); } }
 
         public static ModificationStrategy MultiplicativeStrategy = 
@@ -53,10 +53,10 @@ namespace Eco.Mods.TechTree
     }
 
     [Serialized]
-    [RequiresSkill(typeof(MYGoldenProportionOfBoildEfficiencySkill), 1)]    
-    public partial class MYGoldenProportionOfBoildSpeedSkill : Skill
+    [RequiresSkill(typeof(MYHighestNigiriEfficiencySkill), 1)]    
+    public partial class MYHighestNigiriSpeedSkill : Skill
     {
-        public override string FriendlyName { get { return "Golden Proportion Of Boild Speed"; } }
+        public override string FriendlyName { get { return "Highest Nigiri Speed"; } }
         public override string Description { get { return Localizer.DoStr(""); } }
 
         public static ModificationStrategy MultiplicativeStrategy = 
