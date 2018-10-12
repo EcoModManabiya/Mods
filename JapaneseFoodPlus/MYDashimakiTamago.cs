@@ -16,19 +16,19 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.View;
     
     [Serialized]
-    [Weight(100)]                                          
+    [Weight(50)]                                          
     public partial class MYDashimakiTamagoItem :
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Dashimaki Tamago"; } }
         public override string Description                      { get { return "I mix soup stock with a beaten egg and am a fried dish to harden."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 1, Fat = 10, Protein = 13, Vitamins = 1};
-        public override float Calories                          { get { return 420; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 7, Protein = 9, Vitamins = 1};
+        public override float Calories                          { get { return 102; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(CulinaryArtsSkill), 4)]    
+    [RequiresSkill(typeof(MYCharcoalGrillSkill), 2)]    
     public partial class MYDashimakiTamagoRecipe : Recipe
     {
         public MYDashimakiTamagoRecipe()
@@ -36,15 +36,17 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYDashimakiTamagoItem>(),
+                new CraftingElement<GarbageItem>(typeof(MYCharcoalGrillEfficiencySkill), 1, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
-                new CraftingElement<MYEggItem>(typeof(CulinaryArtsEfficiencySkill), 15, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<SugarItem>(typeof(CulinaryArtsEfficiencySkill), 10, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<OilItem>(typeof(CulinaryArtsEfficiencySkill), 5, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYEggItem>(typeof(MYCharcoalGrillEfficiencySkill), 15, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<SugarItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<OilItem>(typeof(MYCharcoalGrillEfficiencySkill), 5, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenPlatterItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYDashimakiTamagoRecipe), Item.Get<MYDashimakiTamagoItem>().UILink(), 20, typeof(CulinaryArtsSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYDashimakiTamagoRecipe), Item.Get<MYDashimakiTamagoItem>().UILink(), 20, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Dashimaki Tamago", typeof(MYDashimakiTamagoRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }

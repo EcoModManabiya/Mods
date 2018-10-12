@@ -15,7 +15,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Utils;
     using Eco.Shared.View;
     
-    [RequiresSkill(typeof(HomeCookingSkill), 1)]    
+    [RequiresSkill(typeof(MYCharcoalGrillSkill), 1)]    
     public partial class MYGrilledSalmonRecipe : Recipe
     {
         public MYGrilledSalmonRecipe()
@@ -23,14 +23,16 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYGrilledFishItem>(),
+                new CraftingElement<GarbageItem>(typeof(MYCharcoalGrillEfficiencySkill), 1, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<SalmonItem>(1), 
-                new CraftingElement<MYSaltItem>(typeof(HomeCookingEfficiencySkill), 10, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYSaltItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenPlatterItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYGrilledSalmonRecipe), Item.Get<MYGrilledFishItem>().UILink(), 30, typeof(HomeCookingSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYGrilledSalmonRecipe), Item.Get<MYGrilledFishItem>().UILink(), 30, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Grilled Salmon", typeof(MYGrilledSalmonRecipe));
             CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
         }

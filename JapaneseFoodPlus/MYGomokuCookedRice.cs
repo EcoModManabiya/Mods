@@ -23,12 +23,12 @@ namespace Eco.Mods.TechTree
         public override string FriendlyName                     { get { return "Gomoku Cooked Rice"; } }
         public override string Description                      { get { return "When I cook rice, it is a meal to cook an ingredient with rice, and to cook."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 7, Fat = 2, Protein = 1, Vitamins = 2};
-        public override float Calories                          { get { return 1000; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 68, Fat = 5, Protein = 11, Vitamins = 2};
+        public override float Calories                          { get { return 386; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(HomeCookingSkill), 2)]    
+    [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 4)]    
     public partial class MYGomokuCookedRiceRecipe : Recipe
     {
         public MYGomokuCookedRiceRecipe()
@@ -36,19 +36,21 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYGomokuCookedRiceItem>(),
+                new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 3, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<RiceItem>(20),
-                new CraftingElement<MYSoySauceItem>(typeof(HomeCookingEfficiencySkill), 5, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<PreparedMeatItem>(typeof(HomeCookingEfficiencySkill), 8, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<FiddleheadsItem>(typeof(HomeCookingEfficiencySkill), 8, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<FireweedShootsItem>(typeof(HomeCookingEfficiencySkill), 8, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<CriminiMushroomsItem>(typeof(HomeCookingEfficiencySkill), 8, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<BeansItem>(typeof(HomeCookingEfficiencySkill), 8, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYSoySauceItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 5, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<PreparedMeatItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 8, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<FiddleheadsItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 8, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<FireweedShootsItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 8, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<CriminiMushroomsItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 8, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<BeansItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 8, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenBowlItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYGomokuCookedRiceRecipe), Item.Get<MYGomokuCookedRiceItem>().UILink(), 20, typeof(HomeCookingSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYGomokuCookedRiceRecipe), Item.Get<MYGomokuCookedRiceItem>().UILink(), 20, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Gomoku Cooked Rice", typeof(MYGomokuCookedRiceRecipe));
             CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
         }

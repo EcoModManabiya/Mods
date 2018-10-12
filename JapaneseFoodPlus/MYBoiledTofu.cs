@@ -16,19 +16,19 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.View;
     
     [Serialized]
-    [Weight(100)]                                          
+    [Weight(150)]                                          
     public partial class MYBoiledTofuItem :
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Boiled Tofu"; } }
         public override string Description                      { get { return "It is one of the Japanese foods and is food served in a pot using the tofu."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 10, Fat = 5, Protein = 10, Vitamins = 2};
-        public override float Calories                          { get { return 350; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 8, Fat = 5, Protein = 9, Vitamins = 13};
+        public override float Calories                          { get { return 105; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(HomeCookingSkill), 2)]    
+    [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 1)]    
     public partial class MYBoiledTofuRecipe : Recipe
     {
         public MYBoiledTofuRecipe()
@@ -36,16 +36,18 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYBoiledTofuItem>(),
+                new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 1, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
-                new CraftingElement<KelpItem>(typeof(HomeCookingEfficiencySkill), 2, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<CriminiMushroomsItem>(typeof(HomeCookingEfficiencySkill), 2, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYTofuItem>(typeof(HomeCookingEfficiencySkill), 10, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYSoySauceItem>(typeof(HomeCookingEfficiencySkill), 2, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<KelpItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 2, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<CriminiMushroomsItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 2, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYTofuItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYSoySauceItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 2, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenBowlItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBoiledTofuRecipe), Item.Get<MYBoiledTofuItem>().UILink(), 60, typeof(HomeCookingSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBoiledTofuRecipe), Item.Get<MYBoiledTofuItem>().UILink(), 60, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Boiled Tofu", typeof(MYBoiledTofuRecipe));
             CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
         }

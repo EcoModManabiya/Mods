@@ -23,8 +23,8 @@ namespace Eco.Mods.TechTree
         public override string FriendlyName                     { get { return "Grilled Fish"; } }
         public override string Description                      { get { return "It is bakemeat in fish."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 22, Protein = 4, Vitamins = 2};
-        public override float Calories                          { get { return 380; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 4, Fat = 9, Protein = 16, Vitamins = 5};
+        public override float Calories                          { get { return 170; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 }

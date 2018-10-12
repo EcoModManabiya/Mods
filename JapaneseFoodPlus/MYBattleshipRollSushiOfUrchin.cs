@@ -45,6 +45,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYNoriItem>(2), 
                 new CraftingElement<RiceItem>(typeof(MYHighestNigiriEfficiencySkill), 20, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYSoySauceItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenPlatterItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYBattleshipRollSushiOfUrchinRecipe), Item.Get<MYBattleshipRollSushiOfUrchinItem>().UILink(), 10, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Battleship Roll Sushi Of Urchin", typeof(MYBattleshipRollSushiOfUrchinRecipe));
