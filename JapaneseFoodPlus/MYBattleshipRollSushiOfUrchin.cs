@@ -23,8 +23,8 @@ namespace Eco.Mods.TechTree
         public override string FriendlyName                     { get { return "Battleship Roll Sushi Of Urchin"; } }
         public override string Description                      { get { return "It is the sushi with the sushi class with laver with a vinegar meal on winding, the top. Because the figure resembled a warship, it was named."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 13, Fat = 1, Protein = 5, Vitamins = 0};
-        public override float Calories                          { get { return 220; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 20, Fat = 2, Protein = 4, Vitamins = 2};
+        public override float Calories                          { get { return 110; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 

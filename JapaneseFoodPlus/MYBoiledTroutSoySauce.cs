@@ -15,7 +15,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Utils;
     using Eco.Shared.View;
     
-    [RequiresSkill(typeof(HomeCookingSkill), 3)]    
+    [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 3)]    
     public partial class MYBoiledTroutSoySauceRecipe : Recipe
     {
         public MYBoiledTroutSoySauceRecipe()
@@ -23,14 +23,15 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYBoiledFishItem>(),
+                new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 2, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<TroutItem>(1), 
-                new CraftingElement<MYSoySauceItem>(typeof(HomeCookingEfficiencySkill), 10, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYSoySauceItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBoiledTroutSoySauceRecipe), Item.Get<MYBoiledFishItem>().UILink(), 30, typeof(HomeCookingSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBoiledTroutSoySauceRecipe), Item.Get<MYBoiledFishItem>().UILink(), 30, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Boiled Trout Soy Sauce", typeof(MYBoiledTroutSoySauceRecipe));
             CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
         }
