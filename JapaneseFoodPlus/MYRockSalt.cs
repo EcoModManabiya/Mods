@@ -15,7 +15,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Utils;
     using Eco.Shared.View;
     
-    [RequiresSkill(typeof(StoneworkingSkill), 3)]    
+    [RequiresSkill(typeof(StoneworkingSkill), 4)]    
     public partial class MYRockSaltRecipe : Recipe
     {
         public MYRockSaltRecipe()

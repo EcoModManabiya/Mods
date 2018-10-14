@@ -16,19 +16,19 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.View;
     
     [Serialized]
-    [Weight(150)]                                          
+    [Weight(100)]                                          
     public partial class MYRiceBallItem :
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Rice Ball"; } }
         public override string Description                      { get { return "A rice ball is the food which I pressurize triangle, straw bag form, orbicularity, and molded rice."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 15, Fat = 0, Protein = 1, Vitamins = 0};
-        public override float Calories                          { get { return 200; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 38, Fat = 0, Protein = 3, Vitamins = 2};
+        public override float Calories                          { get { return 173; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(HomeCookingSkill), 2)]    
+    [RequiresSkill(typeof(MYHighestNigiriSkill), 1)]    
     public partial class MYRiceBallRecipe : Recipe
     {
         public MYRiceBallRecipe()
@@ -36,6 +36,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYRiceBallItem>(),
+                new CraftingElement<GarbageItem>(typeof(MYHighestNigiriEfficiencySkill), 1, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
@@ -43,9 +44,10 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<RiceItem>(10),
                 new CraftingElement<MYNoriItem>(1), 
                 new CraftingElement<MYSaltedPlumItem>(1), 
-                new CraftingElement<MYSaltItem>(typeof(HomeCookingEfficiencySkill), 5, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYSaltItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenPlatterItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYRiceBallRecipe), Item.Get<MYRiceBallItem>().UILink(), 5, typeof(HomeCookingSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYRiceBallRecipe), Item.Get<MYRiceBallItem>().UILink(), 5, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Rice Ball", typeof(MYRiceBallRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

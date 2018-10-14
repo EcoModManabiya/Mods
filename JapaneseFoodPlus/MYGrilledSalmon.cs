@@ -32,7 +32,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYSaltItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlatterItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYGrilledSalmonRecipe), Item.Get<MYGrilledFishItem>().UILink(), 30, typeof(MYCharcoalGrillSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYGrilledSalmonRecipe), Item.Get<MYGrilledFishItem>().UILink(), 15, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Grilled Salmon", typeof(MYGrilledSalmonRecipe));
             CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
         }

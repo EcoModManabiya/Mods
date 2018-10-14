@@ -16,19 +16,19 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.View;
     
     [Serialized]
-    [Weight(100)]                                          
+    [Weight(150)]                                          
     public partial class MYOkonomiyakiItem :
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Okonomiyaki"; } }
         public override string Description                      { get { return "It is a kind of the grilling foods on an iron plate to use wheat flour and cabbage."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 73, Fat = 28, Protein = 20, Vitamins = 4};
-        public override float Calories                          { get { return 1800; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 46, Fat = 30, Protein = 19, Vitamins = 47};
+        public override float Calories                          { get { return 545; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(HomeCookingSkill), 1)]    
+    [RequiresSkill(typeof(MYCharcoalGrillSkill), 3)]    
     public partial class MYOkonomiyakiRecipe : Recipe
     {
         public MYOkonomiyakiRecipe()
@@ -36,17 +36,19 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYOkonomiyakiItem>(),
+                new CraftingElement<GarbageItem>(typeof(MYCharcoalGrillEfficiencySkill), 2, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
-                new CraftingElement<MYEggItem>(typeof(HomeCookingEfficiencySkill), 10, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<ScrapMeatItem>(typeof(HomeCookingEfficiencySkill), 30, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<VegetableMedleyItem>(typeof(HomeCookingEfficiencySkill), 30, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYEggItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<ScrapMeatItem>(typeof(MYCharcoalGrillEfficiencySkill), 30, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<VegetableMedleyItem>(typeof(MYCharcoalGrillEfficiencySkill), 30, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<FlourItem>(typeof(MillProcessingEfficiencySkill), 15, MillProcessingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<OilItem>(typeof(HomeCookingEfficiencySkill), 10, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<OilItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenPlatterItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYOkonomiyakiRecipe), Item.Get<MYOkonomiyakiItem>().UILink(), 20, typeof(HomeCookingSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYOkonomiyakiRecipe), Item.Get<MYOkonomiyakiItem>().UILink(), 20, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Okonomiyaki", typeof(MYOkonomiyakiRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }

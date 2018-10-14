@@ -18,21 +18,21 @@ namespace Eco.Mods.TechTree
     using Eco.World.Blocks;
     using Eco.Gameplay.Pipes;
     
-    [RequiresSkill(typeof(WoodworkingSkill), 1)]   
-    public partial class MYWoodenPlatterRecipe : Recipe
+    [RequiresSkill(typeof(WoodworkingSkill), 4)]   
+    public partial class MYMeasureRecipe : Recipe
     {
-        public MYWoodenPlatterRecipe()
+        public MYMeasureRecipe()
         {
             this.Products = new CraftingElement[]
             {
-                new CraftingElement<MYWoodenPlatterItem>(2),  
+                new CraftingElement<MYMeasureItem>(),  
             };
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<BoardItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYWoodenPlatterRecipe), Item.Get<MYWoodenPlatterItem>().UILink(), 0.5f, typeof(WoodworkingSpeedSkill));    
-            this.Initialize("Wooden Platter", typeof(MYWoodenPlatterRecipe));
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYMeasureRecipe), Item.Get<MYMeasureItem>().UILink(), 0.5f, typeof(WoodworkingSpeedSkill));    
+            this.Initialize("Measure", typeof(MYMeasureRecipe));
 
             CraftingComponent.AddRecipe(typeof(CarpentryTableObject), this);
         }
@@ -43,11 +43,11 @@ namespace Eco.Mods.TechTree
     [Weight(50)]      
     [Fuel(100)]          
     [Currency]              
-    public partial class MYWoodenPlatterItem :
+    public partial class MYMeasureItem :
     Item                                     
     {
-        public override string FriendlyName { get { return "Wooden Platter"; } } 
-        public override string Description { get { return "A flat, shallow container to serve food in."; } }
+        public override string FriendlyName { get { return "Measure"; } } 
+        public override string Description { get { return "A container of square boxes measuring the quantity such as a liquid, cereals."; } }
 
     }
 

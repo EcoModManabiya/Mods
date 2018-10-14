@@ -50,7 +50,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<BeansItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 8, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenBowlItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYGomokuCookedRiceRecipe), Item.Get<MYGomokuCookedRiceItem>().UILink(), 20, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYGomokuCookedRiceRecipe), Item.Get<MYGomokuCookedRiceItem>().UILink(), 30, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Gomoku Cooked Rice", typeof(MYGomokuCookedRiceRecipe));
             CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
         }

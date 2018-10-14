@@ -23,12 +23,12 @@ namespace Eco.Mods.TechTree
         public override string FriendlyName                     { get { return "Nigiri Sushi"; } }
         public override string Description                      { get { return "It is the sushi which the finger sushi puts a sushi seed on the nubbin of the vinegar meal and made."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 22, Fat = 3, Protein = 10, Vitamins = 1};
-        public override float Calories                          { get { return 500; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 11, Fat = 1, Protein = 4, Vitamins = 0};
+        public override float Calories                          { get { return 68; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(CulinaryArtsSkill), 2)]    
+    [RequiresSkill(typeof(MYHighestNigiriSkill), 4)]    
     public partial class MYNigiriSushiRecipe : Recipe
     {
         public MYNigiriSushiRecipe()
@@ -41,9 +41,10 @@ namespace Eco.Mods.TechTree
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<MYSashimiItem>(1), 
-                new CraftingElement<RiceItem>(typeof(CulinaryArtsEfficiencySkill), 20, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<RiceItem>(typeof(MYHighestNigiriEfficiencySkill), 20, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenPlatterItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNigiriSushiRecipe), Item.Get<MYNigiriSushiItem>().UILink(), 10, typeof(CulinaryArtsSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNigiriSushiRecipe), Item.Get<MYNigiriSushiItem>().UILink(), 5, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Nigiri Sushi", typeof(MYNigiriSushiRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

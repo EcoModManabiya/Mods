@@ -47,7 +47,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYSoySauceItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 2, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenBowlItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBoiledTofuRecipe), Item.Get<MYBoiledTofuItem>().UILink(), 60, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBoiledTofuRecipe), Item.Get<MYBoiledTofuItem>().UILink(), 10, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Boiled Tofu", typeof(MYBoiledTofuRecipe));
             CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
         }

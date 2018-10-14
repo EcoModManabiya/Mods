@@ -46,7 +46,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYMisoItem>(typeof(MYCharcoalGrillEfficiencySkill), 5, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlatterItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYDengakuRecipe), Item.Get<MYDengakuItem>().UILink(), 20, typeof(MYCharcoalGrillSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYDengakuRecipe), Item.Get<MYDengakuItem>().UILink(), 15, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Dengaku", typeof(MYDengakuRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }

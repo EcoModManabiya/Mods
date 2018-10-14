@@ -15,7 +15,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Utils;
     using Eco.Shared.View;
     
-    [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 3)]    
+    [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 2)]    
     public partial class MYBoiledTroutMisoSauceRecipe : Recipe
     {
         public MYBoiledTroutMisoSauceRecipe()

@@ -15,7 +15,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Utils;
     using Eco.Shared.View;
     
-    [RequiresSkill(typeof(FishingSkill), 3)]    
+    [RequiresSkill(typeof(FishingSkill), 4)]    
     public partial class MYSeaSaltRecipe : Recipe
     {
         public MYSeaSaltRecipe()

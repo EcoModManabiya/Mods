@@ -23,12 +23,12 @@ namespace Eco.Mods.TechTree
         public override string FriendlyName                     { get { return "Udon Noodles"; } }
         public override string Description                      { get { return "Noodles having some width and thickness that the udon kneads wheat flour and was under for a long time or the dish."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 68, Fat = 1, Protein = 12, Vitamins = 1};
-        public override float Calories                          { get { return 990; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 61, Fat = 1, Protein = 9, Vitamins = 1};
+        public override float Calories                          { get { return 309; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(CulinaryArtsSkill), 4)]    
+    [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 3)]    
     public partial class MYUdonNoodlesRecipe : Recipe
     {
         public MYUdonNoodlesRecipe()
@@ -36,15 +36,17 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYUdonNoodlesItem>(),
+                new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 1, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<FlourItem>(typeof(MillProcessingEfficiencySkill), 30, MillProcessingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYSoySauceItem>(typeof(HomeCookingEfficiencySkill), 10, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<SugarItem>(typeof(HomeCookingEfficiencySkill), 10, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYSoySauceItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<SugarItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenBowlItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYUdonNoodlesRecipe), Item.Get<MYUdonNoodlesItem>().UILink(), 60, typeof(CulinaryArtsSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYUdonNoodlesRecipe), Item.Get<MYUdonNoodlesItem>().UILink(), 30, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Udon Noodles", typeof(MYUdonNoodlesRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }

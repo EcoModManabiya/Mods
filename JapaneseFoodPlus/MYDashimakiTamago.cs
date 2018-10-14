@@ -46,7 +46,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<OilItem>(typeof(MYCharcoalGrillEfficiencySkill), 5, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlatterItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYDashimakiTamagoRecipe), Item.Get<MYDashimakiTamagoItem>().UILink(), 20, typeof(MYCharcoalGrillSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYDashimakiTamagoRecipe), Item.Get<MYDashimakiTamagoItem>().UILink(), 10, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Dashimaki Tamago", typeof(MYDashimakiTamagoRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }

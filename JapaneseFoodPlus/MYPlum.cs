@@ -16,7 +16,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.View;
     
     [Serialized]
-    [Weight(50)]                                          
+    [Weight(10)]                                          
     public partial class MYPlumItem :
         FoodItem            
     {

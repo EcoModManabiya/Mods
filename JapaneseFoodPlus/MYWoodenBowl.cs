@@ -40,8 +40,8 @@ namespace Eco.Mods.TechTree
 
 
     [Serialized]
-    [Weight(100)]      
-    [Fuel(500)]          
+    [Weight(50)]      
+    [Fuel(100)]          
     [Currency]              
     public partial class MYWoodenBowlItem :
     Item                                     

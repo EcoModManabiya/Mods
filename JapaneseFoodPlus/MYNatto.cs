@@ -23,12 +23,12 @@ namespace Eco.Mods.TechTree
         public override string FriendlyName                     { get { return "Natto"; } }
         public override string Description                      { get { return "The Japanese fermented food which let a soybean ferment by Bacillus natto as for the natto."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 1, Fat = 1, Protein = 2, Vitamins = 0};
-        public override float Calories                          { get { return 500; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 5, Fat = 5, Protein = 7, Vitamins = 0};
+        public override float Calories                          { get { return 90; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(HomeCookingSkill), 3)]    
+    [RequiresSkill(typeof(MYBestSmellSkill), 3)]    
     public partial class MYNattoRecipe : Recipe
     {
         public MYNattoRecipe()
@@ -36,15 +36,17 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYNattoItem>(5),
+                new CraftingElement<GarbageItem>(typeof(MYBestSmellEfficiencySkill), 1, MYBestSmellEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<YeastItem>(typeof(CulinaryArtsEfficiencySkill), 10, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<PlantFibersItem>(typeof(CulinaryArtsEfficiencySkill), 20, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<PlantFibersItem>(typeof(MYBestSmellEfficiencySkill), 20, MYBestSmellEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<BeansItem>(30), 
+                new CraftingElement<MYWoodenBowlItem>(5), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNattoRecipe), Item.Get<MYNattoItem>().UILink(), 40, typeof(CulinaryArtsSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNattoRecipe), Item.Get<MYNattoItem>().UILink(), 120, typeof(MYBestSmellSpeedSkill)); 
             this.Initialize("Natto", typeof(MYNattoRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

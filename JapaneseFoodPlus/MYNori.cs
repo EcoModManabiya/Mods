@@ -23,8 +23,8 @@ namespace Eco.Mods.TechTree
         public override string FriendlyName                     { get { return "Nori"; } }
         public override string Description                      { get { return "Straight laver or the board laver which processed an alga are eaten and become the important materials with a side dish or sushi of the boiled rice."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 10, Fat = 3, Protein = 10, Vitamins = 1};
-        public override float Calories                          { get { return 50; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 1, Fat = 0, Protein = 1, Vitamins = 6};
+        public override float Calories                          { get { return 6; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
@@ -41,6 +41,7 @@ namespace Eco.Mods.TechTree
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<KelpItem>(typeof(FishingSkill), 20, FishingSkill.MultiplicativeStrategy), 
+                new CraftingElement<MYWoodenBowlItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYNoriRecipe), Item.Get<MYNoriItem>().UILink(), 120, typeof(FishingSkill)); 
             this.Initialize("Nori", typeof(MYNoriRecipe));

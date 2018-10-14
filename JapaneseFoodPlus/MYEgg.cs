@@ -23,8 +23,8 @@ namespace Eco.Mods.TechTree
         public override string FriendlyName                     { get { return "Egg"; } }
         public override string Description                      { get { return "Among eggs, a thing liked for consumption use most is a chicken egg."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 10, Protein = 12, Vitamins = 1};
-        public override float Calories                          { get { return 400; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 5, Protein = 6, Vitamins = 1};
+        public override float Calories                          { get { return 77; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 }

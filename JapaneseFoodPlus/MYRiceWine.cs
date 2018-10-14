@@ -23,12 +23,12 @@ namespace Eco.Mods.TechTree
         public override string FriendlyName                     { get { return "Rice Wine"; } }
         public override string Description                      { get { return "Rice usually refers to the refined sake which assumes malted rice and water main raw materials. The liquor which was brewed by the manufacturing method peculiar to Japan."; } }
 
-        private static Nutrients nutrition = new Nutrients()    { Carbs = 6, Fat = 0, Protein = 1, Vitamins = 0};
-        public override float Calories                          { get { return 520; } }
+        private static Nutrients nutrition = new Nutrients()    { Carbs = 7, Fat = 0, Protein = 1, Vitamins = 0};
+        public override float Calories                          { get { return 185; } }
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresSkill(typeof(CulinaryArtsSkill), 4)]    
+    [RequiresSkill(typeof(MYBestSmellSkill), 4)]    
     public partial class MYRiceWineRecipe : Recipe
     {
         public MYRiceWineRecipe()
@@ -40,10 +40,11 @@ namespace Eco.Mods.TechTree
             };
             this.Ingredients = new CraftingElement[]
             {
-                new CraftingElement<RiceItem>(typeof(CulinaryArtsEfficiencySkill), 50, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<RiceItem>(typeof(MYBestSmellEfficiencySkill), 50, MYBestSmellEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<YeastItem>(typeof(CulinaryArtsEfficiencySkill), 30, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYMeasureItem>(2), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYRiceWineRecipe), Item.Get<MYRiceWineItem>().UILink(), 240, typeof(CulinaryArtsSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYRiceWineRecipe), Item.Get<MYRiceWineItem>().UILink(), 120, typeof(MYBestSmellSpeedSkill)); 
             this.Initialize("Rice Wine", typeof(MYRiceWineRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }
