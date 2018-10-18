@@ -36,6 +36,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYNigiriSushiItem>(1),
+                new CraftingElement<MYWoodenPlatterItem>(1),
                
             };
             this.Ingredients = new CraftingElement[]

@@ -36,6 +36,8 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYTempuraItem>(),
+                new CraftingElement<MYWoodenBowlItem>(typeof(MillProcessingEfficiencySkill), 15, MillProcessingEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<MYWoodenBowlItem>(typeof(MYHeatOfTheOilEfficiencySkill), 30, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYHeatOfTheOilEfficiencySkill), 2, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy),
                
             };

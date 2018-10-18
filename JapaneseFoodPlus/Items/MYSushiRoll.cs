@@ -36,6 +36,8 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYSushiRollItem>(2),
+                new CraftingElement<MYWoodenPlatterItem>(typeof(MYHighestNigiriEfficiencySkill), 40, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<MYWoodenBowlItem>(typeof(MYHighestNigiriEfficiencySkill), 10, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYHighestNigiriEfficiencySkill), 1, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
             };

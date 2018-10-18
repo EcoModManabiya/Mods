@@ -36,6 +36,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYGomokuCookedRiceItem>(),
+                new CraftingElement<MYWoodenBowlItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 5, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 3, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                
             };

@@ -36,6 +36,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYNattoItem>(5),
+                new CraftingElement<MYWoodenBowlItem>(typeof(CulinaryArtsEfficiencySkill), 10, CulinaryArtsEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYBestSmellEfficiencySkill), 1, MYBestSmellEfficiencySkill.MultiplicativeStrategy),
                
             };

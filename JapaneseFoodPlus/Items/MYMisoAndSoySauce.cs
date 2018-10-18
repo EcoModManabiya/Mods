@@ -24,6 +24,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<MYMisoItem>(10),
                 new CraftingElement<MYSoySauceItem>(10),
+                new CraftingElement<MYWoodenBowlItem>(typeof(CulinaryArtsEfficiencySkill), 10, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
@@ -31,7 +32,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<BeansItem>(20), 
                 new CraftingElement<MYSaltItem>(typeof(MYBestSmellEfficiencySkill), 10, MYBestSmellEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<YeastItem>(typeof(CulinaryArtsEfficiencySkill), 10, CulinaryArtsEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenBowlItem>(2), 
+                new CraftingElement<MYWoodenBowlItem>(20), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYMisoAndSoySauceRecipe), Item.Get<MYMisoItem>().UILink(), 120, typeof(MYBestSmellSpeedSkill)); 
             this.Initialize("Miso And Soy Sauce", typeof(MYMisoAndSoySauceRecipe));
