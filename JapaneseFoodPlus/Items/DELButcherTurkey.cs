@@ -13,9 +13,9 @@ namespace Eco.Mods.TechTree
     using Kirthos.Mods.Utils;
 
     [RequiresSkill(typeof(SmallButcherySkill), 1)] 
-    public class MYButcherTurkeyRecipe : Recipe
+    public class ButcherTurkeyRecipe : Recipe
     {
-        public MYButcherTurkeyRecipe()
+        public ButcherTurkeyRecipe()
         {
             this.Products = new CraftingElement[]
             {
@@ -28,8 +28,8 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<TurkeyCarcassItem>(typeof(SmallButcheryEfficiencySkill), 1, SmallButcheryEfficiencySkill.MultiplicativeStrategy), 
             };
-            this.Initialize("Butcher Turkey", typeof(MYButcherTurkeyRecipe));
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYButcherTurkeyRecipe), this.UILink(), 1, typeof(SmallButcherySpeedSkill));
+            this.Initialize("Butcher Turkey", typeof(ButcherTurkeyRecipe));
+            this.CraftMinutes = CreateCraftTimeValue(typeof(ButcherTurkeyRecipe), this.UILink(), 1, typeof(SmallButcherySpeedSkill));
             CraftingComponent.AddRecipe(typeof(ButcheryTableObject), this);
         }
     }

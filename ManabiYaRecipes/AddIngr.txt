@@ -1,0 +1,2 @@
+LumberRecipe,MYNailItem,LumberProcessingEfficiencySkill,10f
+SaltBasketRecipe,MYSaltItem,,30f
