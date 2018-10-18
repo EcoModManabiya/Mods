@@ -11,7 +11,7 @@ if %result%==true (
 	echo Override the file.
 	ren ..\Objects\ComputerLabObject.cs ComputerLabObject.csbak	
 ) else if %result%==false (
-	echo Restore to original files.
+	echo Restore to original files. And You must delete ManabiYa Mod.
 	ren ..\Objects\*.csbak *.cs
 )
 @pause
