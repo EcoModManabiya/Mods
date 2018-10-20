@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Katsuo No Tataki"; } }
-        public override string Description                      { get { return "Chopped bonito is fish dishes using the bonitos. I cut a bonito in the knob and after having warmed only the surface, I cool it and hang a limit, a spice and sauce and eat."; } }
+        public override string Description                      { get { return "A dish using bonitos, only the surface of the bonitos are heaten. it is eaten with spice and sauce."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 1, Protein = 26, Vitamins = 2};
         public override float Calories                          { get { return 115; } }
@@ -44,7 +44,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<RawFishItem>(1), 
                 new CraftingElement<MYSoySauceItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(3), 
+                new CraftingElement<MYWoodenPlateItem>(3), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYKatsuoNoTatakiRecipe), Item.Get<MYKatsuoNoTatakiItem>().UILink(), 10, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Katsuo No Tataki", typeof(MYKatsuoNoTatakiRecipe));

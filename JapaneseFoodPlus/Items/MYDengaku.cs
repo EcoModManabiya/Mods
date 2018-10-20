@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Dengaku"; } }
-        public override string Description                      { get { return "I spit tofu and konjac, eggplant or taro and apply the miso which I combine sugar and sweet sake and added a fragrance to in citron or a bud and am bakemeat."; } }
+        public override string Description                      { get { return "Dengaku is a dish made by konjac japanese radish cald daikon etc they boiled it and spit it in a bamboo skewer and eat with miso paste."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 9, Fat = 5, Protein = 9, Vitamins = 0};
         public override float Calories                          { get { return 131; } }
@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYDengakuItem>(),
-                new CraftingElement<MYWoodenPlatterItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<MYWoodenPlateItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<MYWoodenBowlItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
                
             };
@@ -45,7 +45,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYTofuItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<SugarItem>(typeof(MYCharcoalGrillEfficiencySkill), 5, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYMisoItem>(typeof(MYCharcoalGrillEfficiencySkill), 5, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(1), 
+                new CraftingElement<MYWoodenPlateItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYDengakuRecipe), Item.Get<MYDengakuItem>().UILink(), 15, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Dengaku", typeof(MYDengakuRecipe));

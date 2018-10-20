@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Plum"; } }
-        public override string Description                      { get { return "Kind of the fruit tree. In fact, I make a pickled ume, a pickled plum."; } }
+        public override string Description                      { get { return "A plum tree the seed usually be saleted dryied plums."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 0, Protein = 0, Vitamins = 0};
         public override float Calories                          { get { return 0; } }

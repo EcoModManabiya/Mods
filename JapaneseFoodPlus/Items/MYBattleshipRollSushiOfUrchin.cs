@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Battleship Roll Sushi Of Urchin"; } }
-        public override string Description                      { get { return "It is the sushi with the sushi class with laver with a vinegar meal on winding, the top. Because the figure resembled a warship, it was named."; } }
+        public override string Description                      { get { return "A kind of a sushi dish that it is called 'gunkan maki' that it means warship."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 20, Fat = 2, Protein = 4, Vitamins = 2};
         public override float Calories                          { get { return 110; } }
@@ -47,7 +47,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYNoriItem>(2), 
                 new CraftingElement<RiceItem>(typeof(MYHighestNigiriEfficiencySkill), 20, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYSoySauceItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(2), 
+                new CraftingElement<MYWoodenPlateItem>(2), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYBattleshipRollSushiOfUrchinRecipe), Item.Get<MYBattleshipRollSushiOfUrchinItem>().UILink(), 10, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Battleship Roll Sushi Of Urchin", typeof(MYBattleshipRollSushiOfUrchinRecipe));

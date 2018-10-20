@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Miso Soup"; } }
-        public override string Description                      { get { return "The miso soup is one of the soup in the Japanese food and is the soup of dish which assumed the food such as vegetables and tofu, 麸 or fishery products a fruit to the juice which seasoned soup stock with miso."; } }
+        public override string Description                      { get { return "One of the soup in Japan. It is cooked with many patterns like."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 4, Fat = 2, Protein = 4, Vitamins = 0};
         public override float Calories                          { get { return 44; } }

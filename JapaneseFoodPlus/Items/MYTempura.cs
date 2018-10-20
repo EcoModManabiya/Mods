@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Tempura"; } }
-        public override string Description                      { get { return "It is Japanese food that the tempura fries the ingredients such as fishery products or vegetables in a parcel, oil with clothes mainly composed of the wheat flour and cooks."; } }
+        public override string Description                      { get { return "It is Japanese food that fries the ingredients such as fishery products or vegetables, by covering it flour melted in water."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 21, Fat = 24, Protein = 13, Vitamins = 6};
         public override float Calories                          { get { return 354; } }
@@ -50,7 +50,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYSaltItem>(typeof(MYHeatOfTheOilEfficiencySkill), 10, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<OilItem>(typeof(MYHeatOfTheOilEfficiencySkill), 20, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<PaperItem>(1), 
-                new CraftingElement<MYWoodenPlatterItem>(1), 
+                new CraftingElement<MYWoodenPlateItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYTempuraRecipe), Item.Get<MYTempuraItem>().UILink(), 30, typeof(MYHeatOfTheOilSpeedSkill)); 
             this.Initialize("Tempura", typeof(MYTempuraRecipe));

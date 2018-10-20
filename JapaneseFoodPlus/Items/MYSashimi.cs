@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Sashimi"; } }
-        public override string Description                      { get { return "A dish to slice raw fish meat, and to attach soy sauce, and to eat."; } }
+        public override string Description                      { get { return "A dish of sliced raw fish that it is eat with japanese soy souce."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 6, Protein = 10, Vitamins = 3};
         public override float Calories                          { get { return 100; } }
@@ -43,7 +43,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<RawFishItem>(1), 
                 new CraftingElement<MYSoySauceItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(3), 
+                new CraftingElement<MYWoodenPlateItem>(3), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYSashimiRecipe), Item.Get<MYSashimiItem>().UILink(), 10, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Sashimi", typeof(MYSashimiRecipe));

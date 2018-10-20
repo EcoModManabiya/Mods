@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Gomoku Cooked Rice"; } }
-        public override string Description                      { get { return "When I cook rice, it is a meal to cook an ingredient with rice, and to cook."; } }
+        public override string Description                      { get { return "A rice meal that is it cooked. Ingredients and rice cooked together."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 68, Fat = 5, Protein = 11, Vitamins = 2};
         public override float Calories                          { get { return 386; } }

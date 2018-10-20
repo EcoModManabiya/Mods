@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Nigiri Sushi"; } }
-        public override string Description                      { get { return "It is the sushi which the finger sushi puts a sushi seed on the nubbin of the vinegar meal and made."; } }
+        public override string Description                      { get { return "The nigiri sushi, hand shaped sushi. There's many fish and sushi rice combination."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 11, Fat = 1, Protein = 4, Vitamins = 0};
         public override float Calories                          { get { return 68; } }
@@ -36,14 +36,14 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYNigiriSushiItem>(1),
-                new CraftingElement<MYWoodenPlatterItem>(1),
+                new CraftingElement<MYWoodenPlateItem>(1),
                
             };
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<MYSashimiItem>(1), 
                 new CraftingElement<RiceItem>(typeof(MYHighestNigiriEfficiencySkill), 20, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(1), 
+                new CraftingElement<MYWoodenPlateItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYNigiriSushiRecipe), Item.Get<MYNigiriSushiItem>().UILink(), 5, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Nigiri Sushi", typeof(MYNigiriSushiRecipe));

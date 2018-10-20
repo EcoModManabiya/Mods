@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Udon Noodles"; } }
-        public override string Description                      { get { return "Noodles having some width and thickness that the udon kneads wheat flour and was under for a long time or the dish."; } }
+        public override string Description                      { get { return "A kind of noodles made by flour the noodkes have thickness than normal noodles."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 61, Fat = 1, Protein = 9, Vitamins = 1};
         public override float Calories                          { get { return 309; } }

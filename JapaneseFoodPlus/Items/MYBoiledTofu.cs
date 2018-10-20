@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Boiled Tofu"; } }
-        public override string Description                      { get { return "It is one of the Japanese foods and is food served in a pot using the tofu."; } }
+        public override string Description                      { get { return "A Japanese simple dish made with tofu and water. When the water boiled and the tofu is cooked it is usually eaten by a vinegar called ponzu."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 8, Fat = 5, Protein = 9, Vitamins = 13};
         public override float Calories                          { get { return 105; } }
@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYBoiledTofuItem>(),
-                new CraftingElement<MYWoodenPlatterItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<MYWoodenPlateItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<MYWoodenBowlItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 2, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 1, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                

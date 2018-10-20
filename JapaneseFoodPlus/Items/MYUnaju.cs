@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Unaju"; } }
-        public override string Description                      { get { return "Eel and rice in a lacquered box is a Japanese bowl thing with the spitchcock on the white meal that I served it in a bowl."; } }
+        public override string Description                      { get { return "A bowl of rice topped with Eel that it is broiled by soy sauce. The bowl is a traditional bowl called juubako."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 104, Fat = 23, Protein = 31, Vitamins = 7};
         public override float Calories                          { get { return 772; } }

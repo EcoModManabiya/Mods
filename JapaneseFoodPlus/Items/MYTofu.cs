@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Tofu"; } }
-        public override string Description                      { get { return "It is the processed food which hardened the juice of the soybean by a coagulating agent."; } }
+        public override string Description                      { get { return "Tofu is made by soy beans it is boiled and put a coagulant in the broth."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 2, Fat = 4, Protein = 7, Vitamins = 0};
         public override float Calories                          { get { return 72; } }
@@ -43,7 +43,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<BeansItem>(30), 
                 new CraftingElement<ClothItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 5, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(3), 
+                new CraftingElement<MYWoodenPlateItem>(3), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYTofuRecipe), Item.Get<MYTofuItem>().UILink(), 120, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Tofu", typeof(MYTofuRecipe));

@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Nori"; } }
-        public override string Description                      { get { return "Straight laver or the board laver which processed an alga are eaten and become the important materials with a side dish or sushi of the boiled rice."; } }
+        public override string Description                      { get { return "A Japanese food called nori is a dried see weeds. They it is with rice and use for many dishes like sushi."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 1, Fat = 0, Protein = 1, Vitamins = 6};
         public override float Calories                          { get { return 6; } }

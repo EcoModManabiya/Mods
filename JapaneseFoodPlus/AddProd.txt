@@ -15,7 +15,7 @@ CornFrittersRecipe,MYWoodenBowl,CulinaryArtsEfficiencySkill,25f
 CornmealRecipe,GarbageItem,MillProcessingEfficiencySkill,1f
 CrimsonSaladRecipe,GarbageItem,CulinaryArtsEfficiencySkill,1f
 CrimsonSaladRecipe,MYWoodenBowl,CulinaryArtsEfficiencySkill,9f
-ElkTacoRecipe,MYWoodenPlatter,,5f
+ElkTacoRecipe,MYWoodenPlate,,5f
 ElkWellingtonRecipe,GarbageItem,LeavenedBakingEfficiencySkill,1f
 ElkWellingtonRecipe,MYWoodenBowl,LeavenedBakingEfficiencySkill,25f
 FlatbreadRecipe,MYWoodenBowl,BasicBakingEfficiencySkill,10f

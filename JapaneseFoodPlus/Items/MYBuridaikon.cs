@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Buridaikon"; } }
-        public override string Description                      { get { return "The Japanese local cooking that the Buri-daikon boiled the ARA of the yellowtail hard with soy sauce with a Japanese radish."; } }
+        public override string Description                      { get { return "A Japaneseee dish called Buri-daikon is made with amberfish called buri and Japanese radish called daikon it is flavored by soy sauce."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 11, Fat = 11, Protein = 15, Vitamins = 12};
         public override float Calories                          { get { return 211; } }

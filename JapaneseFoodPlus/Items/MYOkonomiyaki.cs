@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Okonomiyaki"; } }
-        public override string Description                      { get { return "It is a kind of the grilling foods on an iron plate to use wheat flour and cabbage."; } }
+        public override string Description                      { get { return "A grill food that is made of cabbage water flour etc."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 46, Fat = 30, Protein = 19, Vitamins = 47};
         public override float Calories                          { get { return 545; } }
@@ -48,7 +48,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<VegetableMedleyItem>(typeof(MYCharcoalGrillEfficiencySkill), 30, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<FlourItem>(typeof(MillProcessingEfficiencySkill), 15, MillProcessingEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<OilItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(1), 
+                new CraftingElement<MYWoodenPlateItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYOkonomiyakiRecipe), Item.Get<MYOkonomiyakiItem>().UILink(), 20, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Okonomiyaki", typeof(MYOkonomiyakiRecipe));

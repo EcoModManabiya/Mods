@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Natto"; } }
-        public override string Description                      { get { return "The Japanese fermented food which let a soybean ferment by Bacillus natto as for the natto."; } }
+        public override string Description                      { get { return "A Japanese fermented food which let the soybean ferment by Bacillus natto as for the natto."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 5, Fat = 5, Protein = 7, Vitamins = 0};
         public override float Calories                          { get { return 90; } }

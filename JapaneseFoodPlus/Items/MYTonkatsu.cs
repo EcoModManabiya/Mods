@@ -48,7 +48,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYMisoItem>(typeof(MYHeatOfTheOilEfficiencySkill), 10, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<SugarItem>(typeof(MYHeatOfTheOilEfficiencySkill), 10, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<OilItem>(typeof(MYHeatOfTheOilEfficiencySkill), 20, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(1), 
+                new CraftingElement<MYWoodenPlateItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYTonkatsuRecipe), Item.Get<MYTonkatsuItem>().UILink(), 20, typeof(MYHeatOfTheOilSpeedSkill)); 
             this.Initialize("Tonkatsu", typeof(MYTonkatsuRecipe));

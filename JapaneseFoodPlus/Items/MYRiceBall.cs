@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Rice Ball"; } }
-        public override string Description                      { get { return "A rice ball is the food which I pressurize triangle, straw bag form, orbicularity, and molded rice."; } }
+        public override string Description                      { get { return "A japanese rice ball. They usually make it in a triangle."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 38, Fat = 0, Protein = 3, Vitamins = 2};
         public override float Calories                          { get { return 173; } }
@@ -46,7 +46,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYNoriItem>(1), 
                 new CraftingElement<MYSaltedPlumItem>(1), 
                 new CraftingElement<MYSaltItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(1), 
+                new CraftingElement<MYWoodenPlateItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYRiceBallRecipe), Item.Get<MYRiceBallItem>().UILink(), 5, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Rice Ball", typeof(MYRiceBallRecipe));

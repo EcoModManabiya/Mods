@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Gyudon"; } }
-        public override string Description                      { get { return "It is salty-sweet and stews beef and the onion which I sliced with soy sauce, and a beef bowl is the dish which I picked up on the meal which I served in a bowl."; } }
+        public override string Description                      { get { return "A dish that is made with beefs and sliced onions by seasoning soy souce it is serve by bowl that putting the beefs on the top of the rice."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 105, Fat = 20, Protein = 22, Vitamins = 5};
         public override float Calories                          { get { return 735; } }

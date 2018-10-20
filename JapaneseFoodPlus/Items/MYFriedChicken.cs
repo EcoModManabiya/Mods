@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Fried Chicken"; } }
-        public override string Description                      { get { return "I covered chicken with wheat flour or dogtooth violet starch thinly and fried it in oil."; } }
+        public override string Description                      { get { return "Fried Chicken fried by flour and starch."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 13, Fat = 16, Protein = 15, Vitamins = 4};
         public override float Calories                          { get { return 274; } }
@@ -47,7 +47,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<FlourItem>(typeof(MillProcessingEfficiencySkill), 15, MillProcessingEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYSaltItem>(typeof(MYHeatOfTheOilEfficiencySkill), 10, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<OilItem>(typeof(MYHeatOfTheOilEfficiencySkill), 20, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(1), 
+                new CraftingElement<MYWoodenPlateItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYFriedChickenRecipe), Item.Get<MYFriedChickenItem>().UILink(), 30, typeof(MYHeatOfTheOilSpeedSkill)); 
             this.Initialize("Fried Chicken", typeof(MYFriedChickenRecipe));

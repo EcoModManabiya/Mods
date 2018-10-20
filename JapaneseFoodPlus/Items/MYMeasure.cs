@@ -47,7 +47,7 @@ namespace Eco.Mods.TechTree
     Item                                     
     {
         public override string FriendlyName { get { return "Measure"; } } 
-        public override string Description { get { return "A container of square boxes measuring the quantity such as a liquid, cereals."; } }
+        public override string Description { get { return "One of the Japanese traditional measure. Masu is a square made by wood, they use it to measure liquid or grains."; } }
 
     }
 

@@ -31,7 +31,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<TroutItem>(1), 
                 new CraftingElement<MYSoySauceItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(1), 
+                new CraftingElement<MYWoodenPlateItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYBoiledTroutSoySauceRecipe), Item.Get<MYBoiledFishItem>().UILink(), 30, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Boiled Trout Soy Sauce", typeof(MYBoiledTroutSoySauceRecipe));

@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Dashimaki Tamago"; } }
-        public override string Description                      { get { return "I mix soup stock with a beaten egg and am a fried dish to harden."; } }
+        public override string Description                      { get { return "A Japanese rolled omelet, blended with soup stock."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 7, Protein = 9, Vitamins = 1};
         public override float Calories                          { get { return 102; } }
@@ -45,7 +45,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYEggItem>(typeof(MYCharcoalGrillEfficiencySkill), 15, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<SugarItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<OilItem>(typeof(MYCharcoalGrillEfficiencySkill), 5, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(1), 
+                new CraftingElement<MYWoodenPlateItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYDashimakiTamagoRecipe), Item.Get<MYDashimakiTamagoItem>().UILink(), 10, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Dashimaki Tamago", typeof(MYDashimakiTamagoRecipe));

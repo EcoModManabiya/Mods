@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Soy Sauce"; } }
-        public override string Description                      { get { return "The liquid seasoning which I assume cereals raw materials mainly, and I let you ferment, and is prepared by a brewing technology."; } }
+        public override string Description                      { get { return "A lquid seasoning. It is useally made with soy beans by fermanation technology."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 1, Fat = 0, Protein = 1, Vitamins = 0};
         public override float Calories                          { get { return 4; } }

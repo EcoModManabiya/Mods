@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Soba Noodles"; } }
-        public override string Description                      { get { return "Japanese noodles machined using the buckwheat flour which assumes the buckwheat of cereals raw materials with the soba and dish using it."; } }
+        public override string Description                      { get { return "A kind of noodles made by buckwheat called sobako the noodles is thin."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 59, Fat = 2, Protein = 12, Vitamins = 0};
         public override float Calories                          { get { return 311; } }

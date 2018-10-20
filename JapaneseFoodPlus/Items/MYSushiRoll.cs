@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Sushi Roll"; } }
-        public override string Description                      { get { return "I point to the Japanese dish which I open a vinegar meal in the laver on the winding bamboo blind and put an ingredient on the top and wound up."; } }
+        public override string Description                      { get { return "The maki-sushi hand rooled sushi."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 59, Fat = 3, Protein = 8, Vitamins = 4};
         public override float Calories                          { get { return 313; } }
@@ -36,7 +36,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYSushiRollItem>(2),
-                new CraftingElement<MYWoodenPlatterItem>(typeof(MYHighestNigiriEfficiencySkill), 40, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<MYWoodenPlateItem>(typeof(MYHighestNigiriEfficiencySkill), 40, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<MYWoodenBowlItem>(typeof(MYHighestNigiriEfficiencySkill), 10, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYHighestNigiriEfficiencySkill), 1, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
@@ -48,7 +48,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYEggItem>(typeof(MYHighestNigiriEfficiencySkill), 20, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYPickleItem>(typeof(MYHighestNigiriEfficiencySkill), 20, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYNoriItem>(typeof(MYHighestNigiriEfficiencySkill), 10, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlatterItem>(2), 
+                new CraftingElement<MYWoodenPlateItem>(2), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYSushiRollRecipe), Item.Get<MYSushiRollItem>().UILink(), 20, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Sushi Roll", typeof(MYSushiRollRecipe));

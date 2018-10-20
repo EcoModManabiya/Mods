@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Salt"; } }
-        public override string Description                      { get { return "I take it out of seawater and produce it as halite again and use it for industry other than seasoning."; } }
+        public override string Description                      { get { return "Produced by seawater it can be rock salt and use in industries."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 0, Protein = 0, Vitamins = 0};
         public override float Calories                          { get { return 0; } }

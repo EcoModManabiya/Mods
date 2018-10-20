@@ -21,7 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Oyakodon"; } }
-        public override string Description                      { get { return "The bowl of rice topped with chicken and eggs binds the chicken which I boiled with mixed seasonings with a beaten egg and is kind of the bowl thing which I rode on a white meal. The name parent and child comes from that I use meat and the egg of the chicken."; } }
+        public override string Description                      { get { return "The bowl of rice topped with chicken and eggs. Oyakodons means the parents and kids."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 104, Fat = 15, Protein = 24, Vitamins = 7};
         public override float Calories                          { get { return 673; } }
