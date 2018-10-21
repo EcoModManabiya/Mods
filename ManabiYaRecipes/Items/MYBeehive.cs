@@ -2,17 +2,30 @@
 {
     using System;
     using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
+    using System.ComponentModel;
+    using Eco.Gameplay.Blocks;
+    using Eco.Gameplay.Components;
+    using Eco.Gameplay.DynamicValues;
     using Eco.Gameplay.Items;
-    using Eco.Gameplay.Items.SearchAndSelect;
+    using Eco.Gameplay.Objects;
+    using Eco.Gameplay.Players;
+    using Eco.Gameplay.Skills;
+    using Eco.Gameplay.Systems.TextLinks;
+    using Eco.Shared.Localization;
+    using Eco.Shared.Serialization;
+    using Eco.Shared.Utils;
+    using Eco.World;
+    using Eco.World.Blocks;
+    using Eco.Gameplay.Pipes;
 
-    [WorldSpaceItem]
-    [StartsDiscovered]
+
+
+    [Serialized]
+    [Weight(5)]      
+    [Currency]              
     public partial class MYBeehiveItem : Item
     {
         public override string FriendlyName { get { return "Beehive"; } } 
-        public override string Description { get { return "Honey should be removed from the hive."; } }
+        public override string Description { get { return "Honey is produced from the hive."; } }
 	}
 }

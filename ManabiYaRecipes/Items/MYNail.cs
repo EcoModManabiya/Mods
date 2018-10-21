@@ -47,7 +47,7 @@ namespace Eco.Mods.TechTree
     public partial class MYNailItem :
     Item                                     
     {
-        public override string FriendlyName { get { return "Wooden Bowl"; } } 
+        public override string FriendlyName { get { return "Nail"; } } 
         public override string Description { get { return "It is tableware with the depth in heaviness to serve boiled rice and soup, noodles dish."; } }
 
     }
