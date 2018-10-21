@@ -1,2 +1,5 @@
 LumberRecipe,MYNailItem,LumberProcessingEfficiencySkill,10f
 SaltBasketRecipe,MYSaltItem,,30f
+StuffedElkRecipe,MYNailItem,ClothProductionEfficiencySkill,20f
+ElkMountRecipe,MYNailItem,ClothProductionEfficiencySkill,15f
+BisonMountRecipe,MYNailItem,ClothProductionEfficiencySkill,20f
