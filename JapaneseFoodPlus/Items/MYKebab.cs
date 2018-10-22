@@ -36,8 +36,8 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYKebabItem>(),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MillProcessingEfficiencySkill), 30, MillProcessingEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<MYWoodenPlateItem>(typeof(MYCharcoalGrillEfficiencySkill), 5, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<MYWoodenBowlItem>(typeof(MYCharcoalGrillEfficiencySkill), 30, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<MYWoodenPlateItem>(typeof(LeavenedBakingEfficiencySkill), 5, LeavenedBakingEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYCharcoalGrillEfficiencySkill), 1, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
                
             };
@@ -45,7 +45,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<PrimeCutItem>(typeof(MYCharcoalGrillEfficiencySkill), 5, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<VegetableMedleyItem>(typeof(MYCharcoalGrillEfficiencySkill), 30, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<FlatbreadItem>(typeof(MillProcessingEfficiencySkill), 5, MillProcessingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<FlatbreadItem>(typeof(LeavenedBakingEfficiencySkill), 5, LeavenedBakingEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<PaperItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYKebabRecipe), Item.Get<MYKebabItem>().UILink(), 20, typeof(MYCharcoalGrillSpeedSkill)); 
