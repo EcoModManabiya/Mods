@@ -28,6 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYStockPotObject))]          
     [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 4)]    
     public partial class MYGomokuCookedRiceRecipe : Recipe
     {
@@ -53,7 +54,7 @@ namespace Eco.Mods.TechTree
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYGomokuCookedRiceRecipe), Item.Get<MYGomokuCookedRiceItem>().UILink(), 30, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Gomoku Cooked Rice", typeof(MYGomokuCookedRiceRecipe));
-            CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
+            CraftingComponent.AddRecipe(typeof(MYMortarOvenObject), this);
         }
     }
 }

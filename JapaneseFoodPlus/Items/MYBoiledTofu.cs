@@ -28,6 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYStockPotObject))]          
     [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 1)]    
     public partial class MYBoiledTofuRecipe : Recipe
     {

@@ -15,6 +15,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Utils;
     using Eco.Shared.View;
     
+    [RequiresModule(typeof(MYFlyingPanObject))]          
     [RequiresSkill(typeof(MYCharcoalGrillSkill), 1)]    
     public partial class MYGrilledSalmonRecipe : Recipe
     {

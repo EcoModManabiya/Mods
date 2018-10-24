@@ -15,6 +15,7 @@ namespace Eco.Mods.TechTree
     using Eco.Shared.Utils;
     using Eco.Shared.View;
     
+    [RequiresModule(typeof(MYStockPotObject))]          
     [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 2)]    
     public partial class MYBoiledTroutSoySauceRecipe : Recipe
     {
