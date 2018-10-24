@@ -47,6 +47,7 @@ namespace Eco.Mods.TechTree
     Item                                     
     {
         public override string FriendlyName { get { return "Wooden Plate"; } } 
+        public override string FriendlyNamePlural { get { return "Wooden Plate"; } } 
         public override string Description { get { return "A flat, shallow container to serve foods."; } }
 
     }

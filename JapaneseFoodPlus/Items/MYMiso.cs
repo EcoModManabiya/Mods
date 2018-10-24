@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Miso"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Miso"; } } 
         public override string Description                      { get { return "One of the seasonings in Japan, it is steamed soybeans and ferment with salt and malted rice called kouji."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 4, Fat = 1, Protein = 2, Vitamins = 0};

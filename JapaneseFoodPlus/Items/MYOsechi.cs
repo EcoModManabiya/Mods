@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Osechi"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Osechi"; } } 
         public override string Description                      { get { return "Osechi are Japanese New Year's dishes that are specially prepared to be eaten during the first three days of January."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 166, Fat = 20, Protein = 43, Vitamins = 12};

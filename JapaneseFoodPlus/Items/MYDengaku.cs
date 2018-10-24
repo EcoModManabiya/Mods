@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Dengaku"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Dengaku"; } } 
         public override string Description                      { get { return "Dengaku is a dish made by konjac japanese radish cald daikon etc they boiled it and spit it in a bamboo skewer and eat with miso paste."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 9, Fat = 5, Protein = 9, Vitamins = 0};

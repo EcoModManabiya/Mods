@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Soy Sauce"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Soy Sauce"; } } 
         public override string Description                      { get { return "A lquid seasoning. It is useally made with soy beans by fermanation technology."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 1, Fat = 0, Protein = 1, Vitamins = 0};

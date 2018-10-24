@@ -33,7 +33,7 @@ namespace Eco.Mods.TechTree
     [Serialized]    
     [RequireComponent(typeof(PropertyAuthComponent))]
     [RequireComponent(typeof(HousingComponent))]                  
-    [RequireComponent(typeof(SolidGroundComponent))]            
+    [RequireComponent(typeof(SolidGroundComponent))]
     public partial class MYStockPotObject : 
         WorldObject,    
         IRepresentsItem

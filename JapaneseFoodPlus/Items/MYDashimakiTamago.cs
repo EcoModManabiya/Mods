@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Dashimaki Tamago"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Dashimaki Tamago"; } } 
         public override string Description                      { get { return "A Japanese rolled omelet, blended with soup stock."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 7, Protein = 9, Vitamins = 1};

@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Sushi Roll"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Sushi Roll"; } } 
         public override string Description                      { get { return "The maki-sushi hand rooled sushi."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 59, Fat = 3, Protein = 8, Vitamins = 4};

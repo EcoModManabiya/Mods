@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Salted Plum"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Salted Plum"; } } 
         public override string Description                      { get { return "Umeboshi is a salted plum and dried. they usually put it in the riceball called onigiri."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 2, Fat = 0, Protein = 0, Vitamins = 0};

@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Egg"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Egg"; } } 
         public override string Description                      { get { return "A chicken egg."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 5, Protein = 6, Vitamins = 1};

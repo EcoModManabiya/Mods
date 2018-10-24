@@ -47,6 +47,7 @@ namespace Eco.Mods.TechTree
     Item                                     
     {
         public override string FriendlyName { get { return "Wooden Bowl"; } } 
+        public override string FriendlyNamePlural { get { return "Wooden"; } } 
         public override string Description { get { return "It is container with the depth it is use to serve dish like boiled rice, soup and noodles."; } }
 
     }

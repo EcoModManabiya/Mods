@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Nori"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Nori"; } } 
         public override string Description                      { get { return "A Japanese food called nori is a dried see weeds. They it is with rice and use for many dishes like sushi."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 1, Fat = 0, Protein = 1, Vitamins = 6};

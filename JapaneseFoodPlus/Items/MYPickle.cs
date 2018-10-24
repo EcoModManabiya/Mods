@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Pickle"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Pickle"; } } 
         public override string Description                      { get { return "A Japanese traditional pikle. there are many combinations of it."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 2, Fat = 0, Protein = 1, Vitamins = 4};

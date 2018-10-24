@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Tofu"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Tofu"; } } 
         public override string Description                      { get { return "Tofu is made by soy beans it is boiled and put a coagulant in the broth."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 2, Fat = 4, Protein = 7, Vitamins = 0};

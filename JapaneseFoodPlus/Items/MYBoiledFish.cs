@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Boiled Fish"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Boiled Fish"; } } 
         public override string Description                      { get { return "A dish which made by fish seasoning sugar soy sauce rice wine boiled in water."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 6, Fat = 4, Protein = 22, Vitamins = 1};

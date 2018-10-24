@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Rice Wine"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Rice Wine"; } } 
         public override string Description                      { get { return "A Japanese traditional rice wine called sake is made with rice malt that they cald kouji and water."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 7, Fat = 0, Protein = 1, Vitamins = 0};
