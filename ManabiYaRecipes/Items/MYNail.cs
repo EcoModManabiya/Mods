@@ -18,7 +18,7 @@ namespace Eco.Mods.TechTree
     using Eco.World.Blocks;
     using Eco.Gameplay.Pipes;
     
-    [RequiresSkill(typeof(BasicSmeltingSkill), 2)]   
+    [RequiresSkill(typeof(MetalworkingSkill), 1)]   
     public partial class MYNailRecipe : Recipe
     {
         public MYNailRecipe()
@@ -26,29 +26,28 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYNailItem>(5),  
-                new CraftingElement<TailingsItem>(typeof(BasicSmeltingEfficiencySkill), 1, BasicSmeltingEfficiencySkill.MultiplicativeStrategy),
             };
             this.Ingredients = new CraftingElement[]
             {
-                new CraftingElement<IronIngotItem>(typeof(BasicSmeltingEfficiencySkill), 5, BasicSmeltingEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<IronIngotItem>(typeof(MetalworkingEfficiencySkill), 5, MetalworkingEfficiencySkill.MultiplicativeStrategy), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNailRecipe), Item.Get<MYNailItem>().UILink(), 4, typeof(BasicSmeltingSpeedSkill));    
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNailRecipe), Item.Get<MYNailItem>().UILink(), 2.5f, typeof(MetalworkingSpeedSkill));    
             this.Initialize("Nail", typeof(MYNailRecipe));
 
-            CraftingComponent.AddRecipe(typeof(BloomeryObject), this);
+            CraftingComponent.AddRecipe(typeof(AnvilObject), this);
         }
     }
 
 
     [Serialized]
-    [Weight(50)]      
-    [Fuel(100)]          
+    [Weight(10)]      
     [Currency]              
     public partial class MYNailItem :
     Item                                     
     {
         public override string FriendlyName { get { return "Nail"; } } 
-        public override string Description { get { return "It is tableware with the depth in heaviness to serve boiled rice and soup, noodles dish."; } }
+        public override string FriendlyNamePlural { get { return "Nail"; } } 
+        public override string Description { get { return "Oh! I have run a nail into my foot."; } }
 
     }
 

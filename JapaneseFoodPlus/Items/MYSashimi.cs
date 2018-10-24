@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Sashimi"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Sashimi"; } } 
         public override string Description                      { get { return "A dish of sliced raw fish that it is eat with japanese soy souce."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 6, Protein = 10, Vitamins = 3};

@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Battleship Roll Sushi Of Urchin"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Battleship Roll Sushi Of Urchin"; } } 
         public override string Description                      { get { return "A kind of a sushi dish that it is called 'gunkan maki' that it means warship."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 20, Fat = 2, Protein = 4, Vitamins = 2};

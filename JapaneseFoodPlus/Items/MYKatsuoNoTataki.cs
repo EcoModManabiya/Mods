@@ -21,6 +21,7 @@ namespace Eco.Mods.TechTree
         FoodItem            
     {
         public override string FriendlyName                     { get { return "Katsuo No Tataki"; } }
+        public override string FriendlyNamePlural 　　　　　　　　　　　　　　{ get { return "Katsuo No Tataki"; } } 
         public override string Description                      { get { return "A dish using bonitos, only the surface of the bonitos are heaten. it is eaten with spice and sauce."; } }
 
         private static Nutrients nutrition = new Nutrients()    { Carbs = 0, Fat = 1, Protein = 26, Vitamins = 2};
