@@ -48,7 +48,7 @@ namespace Eco.Mods.TechTree
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(WheatPorridgeRecipe), Item.Get<WheatPorridgeItem>().UILink(), 3, typeof(CampfireCreationsSpeedSkill)); 
             this.Initialize("Wheat Porridge", typeof(WheatPorridgeRecipe));
-            CraftingComponent.AddRecipe(typeof(CampfireObject), this);
+            CraftingComponent.AddRecipe(typeof(MYMortarOvenObject), this);
         }
     }
 }

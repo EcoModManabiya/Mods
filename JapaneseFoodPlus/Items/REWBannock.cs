@@ -47,7 +47,7 @@ namespace Eco.Mods.TechTree
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(BannockRecipe), Item.Get<BannockItem>().UILink(), 5, typeof(CampfireCreationsSpeedSkill)); 
             this.Initialize("Bannock", typeof(BannockRecipe));
-            CraftingComponent.AddRecipe(typeof(CampfireObject), this);
+            CraftingComponent.AddRecipe(typeof(MYMortarOvenObject), this);
         }
     }
 }

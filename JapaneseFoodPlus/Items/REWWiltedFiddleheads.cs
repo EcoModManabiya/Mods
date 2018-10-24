@@ -46,7 +46,7 @@ namespace Eco.Mods.TechTree
             };
             this.CraftMinutes = new ConstantValue(2);     
             this.Initialize("Wilted Fiddleheads", typeof(WiltedFiddleheadsRecipe));
-            CraftingComponent.AddRecipe(typeof(CampfireObject), this);
+            CraftingComponent.AddRecipe(typeof(MYMortarOvenObject), this);
         }
     }
 }

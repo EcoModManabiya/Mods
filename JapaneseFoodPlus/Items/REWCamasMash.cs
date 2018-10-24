@@ -47,7 +47,7 @@ namespace Eco.Mods.TechTree
             };
             this.CraftMinutes = new ConstantValue(2);     
             this.Initialize("Camas Mash", typeof(CamasMashRecipe));
-            CraftingComponent.AddRecipe(typeof(CampfireObject), this);
+            CraftingComponent.AddRecipe(typeof(MYMortarOvenObject), this);
         }
     }
 }

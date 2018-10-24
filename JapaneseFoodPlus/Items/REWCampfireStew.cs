@@ -49,7 +49,7 @@ namespace Eco.Mods.TechTree
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(CampfireStewRecipe), Item.Get<CampfireStewItem>().UILink(), 10, typeof(CampfireCreationsSpeedSkill)); 
             this.Initialize("Campfire Stew", typeof(CampfireStewRecipe));
-            CraftingComponent.AddRecipe(typeof(CampfireObject), this);
+            CraftingComponent.AddRecipe(typeof(MYMortarOvenObject), this);
         }
     }
 }

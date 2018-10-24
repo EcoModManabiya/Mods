@@ -48,7 +48,7 @@ namespace Eco.Mods.TechTree
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(WildStewRecipe), Item.Get<WildStewItem>().UILink(), 10, typeof(CampfireCreationsSpeedSkill)); 
             this.Initialize("Wild Stew", typeof(WildStewRecipe));
-            CraftingComponent.AddRecipe(typeof(CampfireObject), this);
+            CraftingComponent.AddRecipe(typeof(MYMortarOvenObject), this);
         }
     }
 }
