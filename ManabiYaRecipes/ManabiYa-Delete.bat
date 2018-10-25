@@ -16,6 +16,10 @@ if %result%==true (
 	ren ..\AutoGen\WorldObject\StuffedElk.cs StuffedElk.csdel
 	ren ..\AutoGen\WorldObject\Couch.cs Couch.csdel
 	ren ..\AutoGen\WorldObject\PaddedChair.cs PaddedChair.csdel
+	ren ..\AutoGen\Item\Epoxy.cs Epoxy.csdel
+	ren ..\AutoGen\Item\Gasoline.cs Gasoline.csdel
+	ren ..\AutoGen\Item\Plastic.cs Plastic.csdel
+	ren ..\AutoGen\Item\SyntheticRubber.cs SyntheticRubber.csdel
 ) else if %result%==false (
 	echo Restore to original files. And You must delete ManabiYa Mod.
 	ren ..\AutoGen\Item\*.csdel *.cs

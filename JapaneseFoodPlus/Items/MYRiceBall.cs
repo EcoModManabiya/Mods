@@ -40,7 +40,7 @@ namespace Eco.Mods.TechTree
             };
             this.Ingredients = new CraftingElement[]
             {
-                new CraftingElement<RiceItem>(10),
+                new CraftingElement<RiceItem>(typeof(MYHighestNigiriEfficiencySkill), 50, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYNoriItem>(1), 
                 new CraftingElement<MYSaltedPlumItem>(1), 
                 new CraftingElement<MYSaltItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 

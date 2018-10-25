@@ -99,7 +99,7 @@ namespace Eco.Mods.TechTree
             SkillModifiedValueManager.AddBenefitForObject(typeof(MYFlyingPanRecipe), Item.Get<MYFlyingPanItem>().UILink(), value);
             SkillModifiedValueManager.AddSkillBenefit(Item.Get<MYFlyingPanItem>().UILink(), value);
             this.CraftMinutes = value;
-            this.Initialize("Cutting Board", typeof(MYFlyingPanRecipe));
+            this.Initialize("Flying Pan", typeof(MYFlyingPanRecipe));
             CraftingComponent.AddRecipe(typeof(AnvilObject), this);
         }
     }

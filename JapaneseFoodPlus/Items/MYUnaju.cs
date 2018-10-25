@@ -42,7 +42,7 @@ namespace Eco.Mods.TechTree
             };
             this.Ingredients = new CraftingElement[]
             {
-                new CraftingElement<RiceItem>(20), 
+                new CraftingElement<RiceItem>(typeof(MYRiceCookingEfficiencySkill), 100, MYRiceCookingEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<RawFishItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYSoySauceItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<SugarItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 

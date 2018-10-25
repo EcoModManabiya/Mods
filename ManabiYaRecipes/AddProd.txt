@@ -1,0 +1,4 @@
+EpoxyRecipe,MYUsedBarrelItem,PetrolRefiningEfficiencySkill,5f
+GasolineRecipe,MYUsedBarrelItem,PetrolRefiningEfficiencySkill,5f
+PlasticRecipe,MYUsedBarrelItem,PetrolRefiningEfficiencySkill,5f
+SyntheticRubberRecipe,MYUsedBarrelItem,PetrolRefiningEfficiencySkill,5f
