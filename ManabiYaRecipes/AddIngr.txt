@@ -4,3 +4,4 @@ StuffedElkRecipe,MYNailItem,ClothProductionEfficiencySkill,20f
 ElkMountRecipe,MYNailItem,ClothProductionEfficiencySkill,15f
 BisonMountRecipe,MYNailItem,ClothProductionEfficiencySkill,20f
 CouchRecipe,MYNailItem,ClothProductionEfficiencySkill,20f
+PaddedChairRecipe,MYNailItem,ClothProductionEfficiencySkill,10f
