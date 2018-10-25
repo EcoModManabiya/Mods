@@ -29,6 +29,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYCuttingBoardObject))]          
     [RequiresSkill(typeof(MYHighestNigiriSkill), 3)]    
     public partial class MYBattleshipRollSushiOfUrchinRecipe : Recipe
     {
@@ -37,9 +38,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYBattleshipRollSushiOfUrchinItem>(2),
-                new CraftingElement<MYWoodenBowlItem>(2),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<GarbageItem>(typeof(MYHighestNigiriEfficiencySkill), 2, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<GarbageItem>(typeof(MYHighestNigiriEfficiencySkill), 1, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
@@ -50,7 +49,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYSoySauceItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlateItem>(2), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBattleshipRollSushiOfUrchinRecipe), Item.Get<MYBattleshipRollSushiOfUrchinItem>().UILink(), 10, typeof(MYHighestNigiriSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBattleshipRollSushiOfUrchinRecipe), Item.Get<MYBattleshipRollSushiOfUrchinItem>().UILink(), 5, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Battleship Roll Sushi Of Urchin", typeof(MYBattleshipRollSushiOfUrchinRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

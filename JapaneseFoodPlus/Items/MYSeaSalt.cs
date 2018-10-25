@@ -29,7 +29,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<PlantFibersItem>(typeof(FishingSkill), 20, FishingSkill.MultiplicativeStrategy), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYSeaSaltRecipe), Item.Get<MYSaltItem>().UILink(), 60, typeof(FishingSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYSeaSaltRecipe), Item.Get<MYSaltItem>().UILink(), 10, typeof(FishingSkill)); 
             this.Initialize("Sea Salt", typeof(MYSeaSaltRecipe));
             CraftingComponent.AddRecipe(typeof(CampfireObject), this);
         }

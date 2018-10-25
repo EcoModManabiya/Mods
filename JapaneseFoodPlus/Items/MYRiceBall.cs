@@ -36,7 +36,6 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYRiceBallItem>(),
-                new CraftingElement<MYWoodenBowlItem>(1),
                 new CraftingElement<GarbageItem>(typeof(MYHighestNigiriEfficiencySkill), 1, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
             };
@@ -48,7 +47,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYSaltItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlateItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYRiceBallRecipe), Item.Get<MYRiceBallItem>().UILink(), 5, typeof(MYHighestNigiriSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYRiceBallRecipe), Item.Get<MYRiceBallItem>().UILink(), 2, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Rice Ball", typeof(MYRiceBallRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

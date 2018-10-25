@@ -28,6 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYFlyingPanObject))]          
     [RequiresSkill(typeof(MYCharcoalGrillSkill), 3)]    
     public partial class MYKebabRecipe : Recipe
     {
@@ -48,7 +49,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<FlatbreadItem>(typeof(LeavenedBakingEfficiencySkill), 5, LeavenedBakingEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<PaperItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYKebabRecipe), Item.Get<MYKebabItem>().UILink(), 20, typeof(MYCharcoalGrillSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYKebabRecipe), Item.Get<MYKebabItem>().UILink(), 10, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Kebab", typeof(MYKebabRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }

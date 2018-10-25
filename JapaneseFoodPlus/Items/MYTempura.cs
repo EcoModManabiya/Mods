@@ -28,6 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYFlyingPanObject))]          
     [RequiresSkill(typeof(MYHeatOfTheOilSkill), 4)]    
     public partial class MYTempuraRecipe : Recipe
     {
@@ -36,9 +37,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYTempuraItem>(),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MillProcessingEfficiencySkill), 15, MillProcessingEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYHeatOfTheOilEfficiencySkill), 30, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<GarbageItem>(typeof(MYHeatOfTheOilEfficiencySkill), 2, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<GarbageItem>(typeof(MYHeatOfTheOilEfficiencySkill), 1, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
@@ -52,7 +51,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<PaperItem>(1), 
                 new CraftingElement<MYWoodenPlateItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYTempuraRecipe), Item.Get<MYTempuraItem>().UILink(), 30, typeof(MYHeatOfTheOilSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYTempuraRecipe), Item.Get<MYTempuraItem>().UILink(), 15, typeof(MYHeatOfTheOilSpeedSkill)); 
             this.Initialize("Tempura", typeof(MYTempuraRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }

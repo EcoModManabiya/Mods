@@ -29,6 +29,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYCuttingBoardObject))]          
     [RequiresSkill(typeof(MYHighestNigiriSkill), 3)]    
     public partial class MYSushiRollRecipe : Recipe
     {
@@ -38,7 +39,6 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<MYSushiRollItem>(2),
                 new CraftingElement<MYWoodenPlateItem>(typeof(MYHighestNigiriEfficiencySkill), 40, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYHighestNigiriEfficiencySkill), 10, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYHighestNigiriEfficiencySkill), 1, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
             };
@@ -51,7 +51,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYNoriItem>(typeof(MYHighestNigiriEfficiencySkill), 10, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlateItem>(2), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYSushiRollRecipe), Item.Get<MYSushiRollItem>().UILink(), 20, typeof(MYHighestNigiriSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYSushiRollRecipe), Item.Get<MYSushiRollItem>().UILink(), 5, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Sushi Roll", typeof(MYSushiRollRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

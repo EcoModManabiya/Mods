@@ -28,6 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYStockPotObject))]          
     [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 1)]    
     public partial class MYMisoSoupRecipe : Recipe
     {
@@ -36,7 +37,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYMisoSoupItem>(),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 15, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<MYWoodenBowlItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 1, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                
             };
@@ -48,7 +49,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<KelpItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenBowlItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYMisoSoupRecipe), Item.Get<MYMisoSoupItem>().UILink(), 10, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYMisoSoupRecipe), Item.Get<MYMisoSoupItem>().UILink(), 5, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Miso Soup", typeof(MYMisoSoupRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

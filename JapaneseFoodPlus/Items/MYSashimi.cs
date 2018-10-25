@@ -29,6 +29,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYCuttingBoardObject))]          
     [RequiresSkill(typeof(MYHighestNigiriSkill), 1)]    
     public partial class MYSashimiRecipe : Recipe
     {
@@ -37,7 +38,6 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYSashimiItem>(3),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
@@ -46,7 +46,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYSoySauceItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlateItem>(3), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYSashimiRecipe), Item.Get<MYSashimiItem>().UILink(), 10, typeof(MYHighestNigiriSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYSashimiRecipe), Item.Get<MYSashimiItem>().UILink(), 3, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Sashimi", typeof(MYSashimiRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

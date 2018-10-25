@@ -29,6 +29,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYStockPotObject))]          
     [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 4)]    
     public partial class MYTofuRecipe : Recipe
     {
@@ -44,7 +45,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<BeansItem>(30), 
                 new CraftingElement<ClothItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 5, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenPlateItem>(3), 
+                new CraftingElement<MYWoodenBowlItem>(3), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYTofuRecipe), Item.Get<MYTofuItem>().UILink(), 120, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Tofu", typeof(MYTofuRecipe));

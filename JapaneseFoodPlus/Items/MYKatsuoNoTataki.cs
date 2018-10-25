@@ -29,6 +29,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYCuttingBoardObject))]          
     [RequiresSkill(typeof(MYHighestNigiriSkill), 2)]    
     public partial class MYKatsuoNoTatakiRecipe : Recipe
     {
@@ -37,7 +38,6 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYKatsuoNoTatakiItem>(3),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYHighestNigiriEfficiencySkill), 1, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy),
                
             };
@@ -47,7 +47,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYSoySauceItem>(typeof(MYHighestNigiriEfficiencySkill), 5, MYHighestNigiriEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlateItem>(3), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYKatsuoNoTatakiRecipe), Item.Get<MYKatsuoNoTatakiItem>().UILink(), 10, typeof(MYHighestNigiriSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYKatsuoNoTatakiRecipe), Item.Get<MYKatsuoNoTatakiItem>().UILink(), 5, typeof(MYHighestNigiriSpeedSkill)); 
             this.Initialize("Katsuo No Tataki", typeof(MYKatsuoNoTatakiRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

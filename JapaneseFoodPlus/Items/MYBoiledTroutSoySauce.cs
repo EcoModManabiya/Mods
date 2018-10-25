@@ -24,8 +24,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYBoiledFishItem>(),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 2, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 1, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
@@ -34,7 +33,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYSoySauceItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlateItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBoiledTroutSoySauceRecipe), Item.Get<MYBoiledFishItem>().UILink(), 30, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBoiledTroutSoySauceRecipe), Item.Get<MYBoiledFishItem>().UILink(), 15, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Boiled Trout Soy Sauce", typeof(MYBoiledTroutSoySauceRecipe));
             CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
         }

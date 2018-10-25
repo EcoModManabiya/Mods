@@ -28,6 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYFlyingPanObject))]          
     [RequiresSkill(typeof(MYHeatOfTheOilSkill), 2)]    
     public partial class MYTonkatsuRecipe : Recipe
     {
@@ -36,8 +37,6 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYTonkatsuItem>(),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MillProcessingEfficiencySkill), 15, MillProcessingEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYHeatOfTheOilEfficiencySkill), 40, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYHeatOfTheOilEfficiencySkill), 1, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy),
                
             };
@@ -50,7 +49,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<OilItem>(typeof(MYHeatOfTheOilEfficiencySkill), 20, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlateItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYTonkatsuRecipe), Item.Get<MYTonkatsuItem>().UILink(), 20, typeof(MYHeatOfTheOilSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYTonkatsuRecipe), Item.Get<MYTonkatsuItem>().UILink(), 15, typeof(MYHeatOfTheOilSpeedSkill)); 
             this.Initialize("Tonkatsu", typeof(MYTonkatsuRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }

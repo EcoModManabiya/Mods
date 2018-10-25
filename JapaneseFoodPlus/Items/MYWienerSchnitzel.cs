@@ -28,6 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYFlyingPanObject))]          
     [RequiresSkill(typeof(MYHeatOfTheOilSkill), 2)]    
     public partial class MYWienerSchnitzelRecipe : Recipe
     {
@@ -36,8 +37,6 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYWienerSchnitzelItem>(),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MillProcessingEfficiencySkill), 15, MillProcessingEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYHeatOfTheOilEfficiencySkill), 30, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYHeatOfTheOilEfficiencySkill), 1, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy),
                
             };
@@ -50,7 +49,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYEggItem>(typeof(MYHeatOfTheOilEfficiencySkill), 5, MYHeatOfTheOilEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlateItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYWienerSchnitzelRecipe), Item.Get<MYWienerSchnitzelItem>().UILink(), 30, typeof(MYHeatOfTheOilSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYWienerSchnitzelRecipe), Item.Get<MYWienerSchnitzelItem>().UILink(), 15, typeof(MYHeatOfTheOilSpeedSkill)); 
             this.Initialize("Wiener Schnitzel", typeof(MYWienerSchnitzelRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }

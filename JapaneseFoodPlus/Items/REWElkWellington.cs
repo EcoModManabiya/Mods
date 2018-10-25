@@ -38,7 +38,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<ElkWellingtonItem>(),
                 new CraftingElement<MYWoodenBowlItem>(typeof(LeavenedBakingEfficiencySkill), 25, LeavenedBakingEfficiencySkill.MultiplicativeStrategy),
-               new CraftingElement<GarbageItem>(typeof(LeavenedBakingEfficiencySkill), 1, LeavenedBakingEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<GarbageItem>(typeof(LeavenedBakingEfficiencySkill), 1, LeavenedBakingEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]

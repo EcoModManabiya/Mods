@@ -28,6 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYStockPotObject))]          
     [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 3)]    
     public partial class MYBuridaikonRecipe : Recipe
     {
@@ -36,8 +37,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYBuridaikonItem>(),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 20, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 2, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 1, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
@@ -48,7 +48,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYSoySauceItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 10, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenBowlItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBuridaikonRecipe), Item.Get<MYBuridaikonItem>().UILink(), 30, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYBuridaikonRecipe), Item.Get<MYBuridaikonItem>().UILink(), 15, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Buridaikon", typeof(MYBuridaikonRecipe));
             CraftingComponent.AddRecipe(typeof(KitchenObject), this);
         }

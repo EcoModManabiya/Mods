@@ -29,6 +29,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYFlyingPanObject))]          
     [RequiresSkill(typeof(MYCharcoalGrillSkill), 2)]    
     public partial class MYDengakuRecipe : Recipe
     {
@@ -38,7 +39,6 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<MYDengakuItem>(),
                 new CraftingElement<MYWoodenPlateItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYCharcoalGrillEfficiencySkill), 10, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
@@ -48,9 +48,9 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYMisoItem>(typeof(MYCharcoalGrillEfficiencySkill), 5, MYCharcoalGrillEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenPlateItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYDengakuRecipe), Item.Get<MYDengakuItem>().UILink(), 15, typeof(MYCharcoalGrillSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYDengakuRecipe), Item.Get<MYDengakuItem>().UILink(), 5, typeof(MYCharcoalGrillSpeedSkill)); 
             this.Initialize("Dengaku", typeof(MYDengakuRecipe));
-            CraftingComponent.AddRecipe(typeof(StoveObject), this);
+            CraftingComponent.AddRecipe(typeof(CastIronStoveObject), this);
         }
     }
 }

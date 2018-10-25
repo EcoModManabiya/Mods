@@ -29,7 +29,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
-    [RequiresModule(typeof(MYFlyingPanObject))]          
+    [RequiresModule(typeof(MYStockPotObject))]          
     [RequiresSkill(typeof(CampfireCreationsSkill), 1)]    
     public partial class WheatPorridgeRecipe : Recipe
     {

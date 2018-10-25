@@ -37,8 +37,7 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYPickleItem>(20),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYBestSmellEfficiencySkill), 20, MYBestSmellEfficiencySkill.MultiplicativeStrategy),
-                new CraftingElement<GarbageItem>(typeof(MYBestSmellEfficiencySkill), 2, MYBestSmellEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<GarbageItem>(typeof(MYBestSmellEfficiencySkill), 1, MYBestSmellEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]

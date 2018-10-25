@@ -42,9 +42,8 @@ namespace Eco.Mods.TechTree
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<KelpItem>(typeof(FishingSkill), 20, FishingSkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenBowlItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNoriRecipe), Item.Get<MYNoriItem>().UILink(), 120, typeof(FishingSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYNoriRecipe), Item.Get<MYNoriItem>().UILink(), 20, typeof(FishingSkill)); 
             this.Initialize("Nori", typeof(MYNoriRecipe));
             CraftingComponent.AddRecipe(typeof(CampfireObject), this);
         }

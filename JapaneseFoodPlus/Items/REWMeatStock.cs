@@ -37,13 +37,12 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MeatStockItem>(),
-                new CraftingElement<GarbageItem>(typeof(HomeCookingEfficiencySkill), 2, HomeCookingEfficiencySkill.MultiplicativeStrategy),
+                new CraftingElement<GarbageItem>(typeof(HomeCookingEfficiencySkill), 1, HomeCookingEfficiencySkill.MultiplicativeStrategy),
                
             };
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<ScrapMeatItem>(typeof(HomeCookingEfficiencySkill), 20, HomeCookingEfficiencySkill.MultiplicativeStrategy), 
-                new CraftingElement<MYWoodenBowlItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MeatStockRecipe), Item.Get<MeatStockItem>().UILink(), 20, typeof(HomeCookingSpeedSkill)); 
             this.Initialize("Meat Stock", typeof(MeatStockRecipe));

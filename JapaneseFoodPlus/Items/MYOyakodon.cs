@@ -28,6 +28,7 @@ namespace Eco.Mods.TechTree
         public override Nutrients Nutrition                     { get { return nutrition; } }
     }
 
+    [RequiresModule(typeof(MYStockPotObject))]          
     [RequiresSkill(typeof(MYGoldenProportionOfBoildSkill), 4)]    
     public partial class MYOyakodonRecipe : Recipe
     {
@@ -36,7 +37,6 @@ namespace Eco.Mods.TechTree
             this.Products = new CraftingElement[]
             {
                 new CraftingElement<MYOyakodonItem>(),
-                new CraftingElement<MYWoodenBowlItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 20, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                 new CraftingElement<GarbageItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 2, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy),
                
             };
@@ -49,7 +49,7 @@ namespace Eco.Mods.TechTree
                 new CraftingElement<MYEggItem>(typeof(MYGoldenProportionOfBoildEfficiencySkill), 5, MYGoldenProportionOfBoildEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYWoodenBowlItem>(1), 
             };
-            this.CraftMinutes = CreateCraftTimeValue(typeof(MYOyakodonRecipe), Item.Get<MYOyakodonItem>().UILink(), 20, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
+            this.CraftMinutes = CreateCraftTimeValue(typeof(MYOyakodonRecipe), Item.Get<MYOyakodonItem>().UILink(), 10, typeof(MYGoldenProportionOfBoildSpeedSkill)); 
             this.Initialize("Oyakodon", typeof(MYOyakodonRecipe));
             CraftingComponent.AddRecipe(typeof(StoveObject), this);
         }
