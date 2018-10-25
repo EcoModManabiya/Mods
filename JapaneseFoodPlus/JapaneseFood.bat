@@ -28,9 +28,9 @@ if %result%==true (
 	ren ..\AutoGen\Recipe\MixedVegetableMedley.cs MixedVegetableMedley.csbak
 	ren ..\AutoGen\Food\CrispyBacon.cs CrispyBacon.csbak
 	ren ..\AutoGen\Food\MeatStock.cs MeatStock.csbak
-	ren ..\AutoGen\Recipe\StuffedTurkey.cs StuffedTurkey.csbak
-	ren ..\AutoGen\Recipe\VegetableSoup.cs VegetableSoup.csbak
-	ren ..\AutoGen\Recipe\VegetableStock.cs VegetableStock.csbak
+	ren ..\AutoGen\Food\StuffedTurkey.cs StuffedTurkey.csbak
+	ren ..\AutoGen\Food\VegetableSoup.cs VegetableSoup.csbak
+	ren ..\AutoGen\Food\VegetableStock.cs VegetableStock.csbak
 	ren ..\AutoGen\Food\SimmeredMeat.cs SimmeredMeat.csbak
 	ren ..\AutoGen\Food\ElkWellington.cs ElkWellington.csbak
 	ren ..\AutoGen\Food\CamasBulbBake.cs CamasBulbBake.csbak
@@ -45,7 +45,7 @@ if %result%==true (
 	ren ..\AutoGen\Food\CornFritters.cs CornFritters.csbak
 	ren ..\AutoGen\Food\ElkTaco.cs ElkTaco.csbak
 	ren ..\AutoGen\Food\FriedHareHaunches.cs FriedHareHaunches.csbak
-	ren ..\AutoGen\Food\RefineTallow.cs RefineTallow.csbak
+	ren ..\AutoGen\Recipe\RefineTallow.cs RefineTallow.csbak
 	ren ..\AutoGen\Food\SearedMeat.cs SearedMeat.csbak
 	ren ..\AutoGen\Food\CampfireRoast.cs CampfireRoast.csbak
 	ren ..\AutoGen\Food\CharredSausage.cs CharredSausage.csbak
