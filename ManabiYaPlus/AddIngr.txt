@@ -5,3 +5,5 @@ ElkMountRecipe,MYNailItem,ClothProductionEfficiencySkill,15f
 BisonMountRecipe,MYNailItem,ClothProductionEfficiencySkill,20f
 CouchRecipe,MYNailItem,ClothProductionEfficiencySkill,20f
 PaddedChairRecipe,MYNailItem,ClothProductionEfficiencySkill,10f
+GasolineRecipe,BarrelItem,,1f
+BiodieselRecipe,BarrelItem,,1f

@@ -32,6 +32,7 @@ namespace Eco.Mods.TechTree
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<PetroleumItem>(typeof(PetrolRefiningEfficiencySkill), 5, PetrolRefiningEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<BarrelItem>(1), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(GasolineRecipe), Item.Get<GasolineItem>().UILink(), 2, typeof(PetrolRefiningSpeedSkill));    
             this.Initialize("Gasoline", typeof(GasolineRecipe));

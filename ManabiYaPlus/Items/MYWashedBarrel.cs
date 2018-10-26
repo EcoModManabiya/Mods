@@ -32,7 +32,6 @@ namespace Eco.Mods.TechTree
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<MYUsedBarrelItem>(5), 
-                new CraftingElement<MYUsedBarrelItem>(typeof(MYReusingEfficiencySkill), 5, MYReusingEfficiencySkill.MultiplicativeStrategy), 
                 new CraftingElement<MYDetergentsItem>(typeof(MYReusingEfficiencySkill), 5, MYReusingEfficiencySkill.MultiplicativeStrategy), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYWashedBarrelRecipe), Item.Get<BarrelItem>().UILink(), 10, typeof(MYReusingSpeedSkill));    
