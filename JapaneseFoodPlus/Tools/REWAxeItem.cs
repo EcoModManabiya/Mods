@@ -69,6 +69,7 @@ namespace Eco.Mods.TechTree
             }
             else
 			{
+//						context.Player.SendTemporaryMessageLoc(MYpp.ToString());
 				if (context.Target.GetType().Name.ToString() == "MYCuttingBoardObject")
 				{
 					if (MYpp <= 4)
