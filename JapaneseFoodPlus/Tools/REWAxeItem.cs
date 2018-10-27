@@ -12,6 +12,7 @@ namespace Eco.Mods.TechTree
     using Eco.World;
     using Eco.World.Blocks;
     using Gameplay.Systems.TextLinks;
+    using Eco.Gameplay.Objects;
 
     [Category("Hidden")]
     public partial class AxeItem
@@ -37,15 +38,16 @@ namespace Eco.Mods.TechTree
 
         public override InteractResult OnActLeft(InteractionContext context)
         {
+			Random r = new System.Random();
+			int MYpp = r.Next(100);
+			InventoryChangeSet changes = new InventoryChangeSet(context.Player.User.Inventory, context.Player.User);
+
             if (context.HasBlock)
             {
                 var block = World.GetBlock(context.BlockPosition.Value);
                 if (block.Is<TreeDebris>())
                 {
-                    InventoryChangeSet changes = new InventoryChangeSet(context.Player.User.Inventory, context.Player.User);
 
-					Random r = new System.Random();
-					int MYpp = r.Next(100);
 					if (MYpp <= 4)
 					{
 						changes.AddItems<MYBeehiveItem>(1);
@@ -54,7 +56,7 @@ namespace Eco.Mods.TechTree
 					else if (MYpp <= 20)
 					{
 						changes.AddItems<MYPlumItem>(2);
-						changes.AddItems<WoodPulpItem>(3);
+						changes.AddItems<WoodPulpItem>(4);
 					}
 					else
 					{
@@ -67,7 +69,26 @@ namespace Eco.Mods.TechTree
                     return InteractResult.NoOp;
             }
             else
+			{
+                context.Player.SendTemporaryMessageLoc(context.Target.GetType().Name);
+				if (context.Target.GetType().Name == "MYCuttingBoardObject")
+				{
+					if (MYpp <= 4)
+					{
+//						changes.AddItems<BisonFemaleItem>(1);
+					}
+					else if (MYpp <= 20)
+					{
+						changes.AddItems<BisonCarcassItem>(1);
+					}
+					else if (MYpp <= 50)
+					{
+						changes.AddItems<ElkCarcassItem>(1);
+					}
+					(context.Target as WorldObject).Destroy();
+				}
                 return base.OnActLeft(context);
+			}
         }
 
         public override bool ShouldHighlight(Type block)
