@@ -38,16 +38,15 @@ namespace Eco.Mods.TechTree
 
         public override InteractResult OnActLeft(InteractionContext context)
         {
-			Random r = new System.Random();
-			int MYpp = r.Next(100);
 			InventoryChangeSet changes = new InventoryChangeSet(context.Player.User.Inventory, context.Player.User);
 
+			Random r = new System.Random();
+			int MYpp = r.Next(100);
             if (context.HasBlock)
             {
                 var block = World.GetBlock(context.BlockPosition.Value);
                 if (block.Is<TreeDebris>())
                 {
-
 					if (MYpp <= 4)
 					{
 						changes.AddItems<MYBeehiveItem>(1);
@@ -70,8 +69,7 @@ namespace Eco.Mods.TechTree
             }
             else
 			{
-                context.Player.SendTemporaryMessageLoc(context.Target.GetType().Name);
-				if (context.Target.GetType().Name == "MYCuttingBoardObject")
+				if (context.Target.GetType().Name.ToString() == "MYCuttingBoardObject")
 				{
 					if (MYpp <= 4)
 					{
