@@ -7,3 +7,5 @@ CouchRecipe,MYNailItem,ClothProductionEfficiencySkill,20f
 PaddedChairRecipe,MYNailItem,ClothProductionEfficiencySkill,10f
 GasolineRecipe,BarrelItem,,1f
 BiodieselRecipe,BarrelItem,,1f
+LaserRecipe,MYRubyItem,,1f
+CircuitRecipe,MYMinorMetalItem,ElectronicEngineeringEfficiencySkill,10f
