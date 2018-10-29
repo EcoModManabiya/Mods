@@ -68,26 +68,7 @@ namespace Eco.Mods.TechTree
                     return InteractResult.NoOp;
             }
             else
-			{
-//						context.Player.SendTemporaryMessageLoc(MYpp.ToString());
-				if (context.Target.GetType().Name.ToString() == "MYCuttingBoardObject")
-				{
-					if (MYpp <= 4)
-					{
-//						changes.AddItems<BisonFemaleItem>(1);
-					}
-					else if (MYpp <= 20)
-					{
-						changes.AddItems<BisonCarcassItem>(1);
-					}
-					else if (MYpp <= 50)
-					{
-						changes.AddItems<ElkCarcassItem>(1);
-					}
-					(context.Target as WorldObject).Destroy();
-				}
                 return base.OnActLeft(context);
-			}
         }
 
         public override bool ShouldHighlight(Type block)
