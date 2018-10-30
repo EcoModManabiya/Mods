@@ -15,6 +15,7 @@ if %result%==true (
 	ren ..\AutoGen\Vehicle\Truck.cs Truck.csbak	
 	ren ..\Items\Tailings.cs Tailings.csbak	
 	ren ..\Objects\WorldObject\Laboratory.cs Laboratory.csbak	
+	ren ..\Items\Waste.cs Waste.csbak	
 ) else if %result%==false (
 	echo Restore to original files. And You must delete ManabiYa Mod.
 	ren ..\Objects\*.csbak *.cs
