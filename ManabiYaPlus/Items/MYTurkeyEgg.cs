@@ -30,7 +30,7 @@ namespace Eco.Mods.TechTree
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<MYTurkeyAnimalItem>(1), 
-                new CraftingElement<MYTurkeyBaitItem>(typeof(SmallButcheryEfficiencySkill), 5, SmallButcheryEfficiencySkill.MultiplicativeStrategy), 
+                new CraftingElement<MYTurkeyBaitItem>(typeof(SmallButcheryEfficiencySkill), 10, SmallButcheryEfficiencySkill.MultiplicativeStrategy), 
             };
             this.CraftMinutes = CreateCraftTimeValue(typeof(MYTurkeyEggRecipe), Item.Get<MYEggItem>().UILink(), 120, typeof(SmallButcherySpeedSkill));    
             this.Initialize("Turkey Egg", typeof(MYTurkeyEggRecipe));

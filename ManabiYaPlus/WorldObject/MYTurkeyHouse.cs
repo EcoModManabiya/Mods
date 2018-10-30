@@ -85,8 +85,7 @@ namespace Eco.Mods.TechTree
             {
                 new CraftingElement<MYTurkeyHouseItem>(),          
 
-            new CraftingElement<WoodPulpItem>(3),
-            };
+			};
             this.Ingredients = new CraftingElement[]
             {
                 new CraftingElement<LumberItem>(typeof(LumberProcessingEfficiencySkill), 10, LumberProcessingEfficiencySkill.MultiplicativeStrategy), 
